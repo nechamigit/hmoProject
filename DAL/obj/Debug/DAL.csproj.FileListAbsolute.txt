@@ -1,0 +1,36 @@
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CopyComplete
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.pdb
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll.config
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.pdb
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.dll
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.xml
+D:\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.dll
+D:\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csproj.CopyComplete
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.pdb
+D:\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

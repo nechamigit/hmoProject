@@ -1,0 +1,34 @@
+<form *ngIf="request">
+  <h1>request</h1>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="שם פקיד" name="userName" required [(ngModel)]="request.user.userName">
+    </mat-form-field>
+  </div> 
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="קטגוריה" name="categoryName" required [(ngModel)]="request.categoryName">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="קטגוריית אב" name="parentCategory" required [(ngModel)]="request.parentCategory">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="סטטוס" name="requestStatus" required [(ngModel)]="request.requestStatus">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="סוג בקשה" name="requestKind" required [(ngModel)]="request.requestKind">
+    </mat-form-field>
+  </div>
+  <!-- <button type="submit">save</button>
+  <div class="example-button-row">
+    <button mat-fab color="primary">update</button>
+    <button mat-fab color="primary">-</button>
+    <button mat-fab color="primary">+</button> 
+  </div>-->
+</form>

@@ -1,0 +1,12 @@
+<div class="categoryDetails" *ngIf="selectedCategory">
+  <h1>{{selectedCategory.Name}}</h1>
+  <button (click)="addCategory()">הוסף קטגוריה</button>
+  <app-product-card *ngFor="let product of selectedCategory.ProductsList" [(product)]="product"></app-product-card>
+  <button (click)="addProduct()">להוספת מוצר</button>
+
+  <!-- <div *ngFor="let prod of selectedCategory.productList">
+    {{prod.name}}  <button (click)="deleteProduct(prod)">למחיקת מוצר</button>
+  </div> -->
+ 
+</div>
+

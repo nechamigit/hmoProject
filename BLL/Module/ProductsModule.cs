@@ -1,0 +1,91 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DTO;
+using BLL.CRUD;
+namespace BLL.Module
+{
+    public static class ProductsModule
+    {
+        //public static PRICE price;
+        public static PRODUCTS_DTO getProductsById(int id)
+        {
+            using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+            {
+                return ProductsCRUD.ReadById(ctx, id);
+            }
+        }
+        //public static List<PRODUCTS_TBL> getProductByKriterion(CATEGORIES_TBL category, AGE_TBL age)
+        //{
+        //    using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+        //    {
+
+        //        ctx.PRODUCTS_TBL.SqlQuery("").Select()
+        //        List<PRICE> productPrice;
+        //        var productList = ctx.PRODUCTS_TBL.Where(u => u.categoryId == category.categoriesId);
+        //        foreach (var item in productList)
+        //        {
+        //            productPrice = ctx.PRICEs.Where(u => u.productId == item.productId).ToList();
+        //        }
+        //        var proList = productPrice.Where(u => u.ageId == age.ageId).ToList();
+        //        return null;
+        //    }
+        //}
+
+        public static List<ProductPrices> getProductByKriterion(PRODUCTS_TBL product, AGE_TBL age)
+        {
+            using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+            {
+
+               return (from prc in ctx.PRICEs
+                              join ins in ctx.INSURANCE_TBL on prc.insuranceId equals ins.insuranceId
+                              join hmo in ctx.HMO_TBL on ins.hmoId equals hmo.hmoId
+                              where prc.ageId == age.ageId && prc.productId == product.productId
+                              select new ProductPrices
+                              {
+                                  AgeBegin = age.begins,
+                                  AgeEnd = age.ends,
+                                  AgeId = age.ageId,
+                                  Discount = prc.discount,
+                                  HmoId = hmo.hmoId,
+                                  HmoName = hmo.hmoName,
+                                  InsuranceId = ins.insuranceId,
+                                  InsuranceName = ins.insuranceName,
+                                  PriceId = prc.priceId,
+                                  PriceText = prc.priceText,
+                                  ProductId = product.productId,
+                                  ProductName = product.name
+                              }).ToList();
+            }
+        }
+
+        public class ProductPrices
+        {
+            public int ProductId { get; set; }
+            public string ProductName { get; set; }
+
+            public int PriceId { get; set; }
+            public double? PriceText { get; set; }
+            public double? Discount { get; set; }
+
+            public int InsuranceId { get; set; }
+            public string InsuranceName { get; set; }
+
+            public int HmoId { get; set; }
+            public string HmoName { get; set; }
+
+
+            public int AgeId { get; set; }
+
+            public int? AgeBegin { get; set; }
+
+            public int? AgeEnd { get; set; }
+
+        }
+
+
+    }
+}

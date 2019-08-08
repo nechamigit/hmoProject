@@ -1,0 +1,97 @@
+<form *ngIf="clerk" (ngSubmit)="save()">
+  <h1>clerk</h1>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="ת.ז" name="userTz" required [(ngModel)]="clerk.tz">
+    </mat-form-field>
+  </div> 
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="שם פרטי" name="userFirstName" required [(ngModel)]="clerk.firstName">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="שם משפחה" name="userLastName" required [(ngModel)]="clerk.lastName">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="שם משתמש" name="userName" required [(ngModel)]="clerk.userName">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="password" matInput placeholder="סיסמא" name="password" required [(ngModel)]="clerk.password">
+    </mat-form-field>
+  </div>
+<div class="row">
+  <mat-form-field>
+    <mat-label>קופת חולים</mat-label>
+     <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
+      <mat-option *ngFor="let hmo of hmos" [value]="clerk.hmoId">
+        {{hmo.hmoName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="כתובת" name="address" required [(ngModel)]="clerk.address">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="מייל" name="mail" required [(ngModel)]="clerk.mail">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="example">
+      <input type="text" matInput placeholder="טלפון" name="telephone" required [(ngModel)]="clerk.telephone">
+    </mat-form-field>
+  </div>
+  <button type="submit">save</button>
+  <div class="example-button-row">
+    <button mat-fab color="primary">update</button>
+    <button mat-fab color="primary" (click)="deleteClerk()">-</button>
+    <button mat-fab color="primary" (click)="changeStatus()">+</button>
+  </div>
+</form>
+
+        <!-- requestForm:string; -->
+        
+
+  <!-- <mat-form-field class="example-full-width">
+    <input matInput placeholder="הזן כתובת מייל" [formControl]="emailFormControl" [errorStateMatcher]="matcher" id="mail"
+      name="mail" required maxlength="30" [(ngModel)]="user.mail" #mail>
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <label for="mail">מייל</label>
+  <input type="text" placeholder="הזן כתובת אמייל" id="mail" name="mail" required maxlength="12" [(ngModel)]="user.mail"
+    #mail> -->
+
+
+  <!-- <div class="row">
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput placeholder="הזן מספר טלפון" id="phone" name="phone" required maxlength="10" type="number"
+        [(ngModel)]="user.telephone" #phone>
+    </mat-form-field>
+  </div>
+  <button *ngIf="userType==''" (click)="submitDetails()">אישור</button>
+  <button>ביטול</button>
+  <button *ngIf="userType=='manager'" type="submit" (click)="confirmClerk()" class="btn btn_success">שלח</button>
+
+<div class="row">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="הכנס שם" value="" type="text" [(ngModel)]="user.userName">
+  </mat-form-field>
+</div> -->

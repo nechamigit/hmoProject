@@ -1,0 +1,51 @@
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll.config
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.pdb
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CopyComplete
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.dll
+Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.pdb
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll.config
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.pdb
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.dll
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.dll
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.pdb
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll.config
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.pdb
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.xml
+D:\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.dll
+D:\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll.config
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\BLL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DAL.dll.config
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.pdb
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.xml
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CopyComplete

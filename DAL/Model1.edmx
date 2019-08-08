@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HMO_PROGECTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AGE_TBL">
+          <Key>
+            <PropertyRef Name="ageId" />
+          </Key>
+          <Property Name="ageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="begins" Type="int" />
+          <Property Name="ends" Type="int" />
+        </EntityType>
+        <EntityType Name="CATEGORIES_TBL">
+          <Key>
+            <PropertyRef Name="categoriesId" />
+          </Key>
+          <Property Name="categoriesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="parentCategory" Type="int" />
+          <Property Name="createBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="bit" />
+        </EntityType>
+        <EntityType Name="HMO_TBL">
+          <Key>
+            <PropertyRef Name="hmoId" />
+          </Key>
+          <Property Name="hmoId" Type="int" Nullable="false" />
+          <Property Name="hmoName" Type="nvarchar" MaxLength="50" />
+          <Property Name="hmoMail" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="INSURANCE_TBL">
+          <Key>
+            <PropertyRef Name="insuranceId" />
+          </Key>
+          <Property Name="insuranceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hmoId" Type="int" Nullable="false" />
+          <Property Name="insuranceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="InsurancePrice" Type="float" />
+          <Property Name="description" Type="char" MaxLength="70" />
+        </EntityType>
+        <EntityType Name="PRICE">
+          <Key>
+            <PropertyRef Name="priceId" />
+          </Key>
+          <Property Name="priceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="priceText" Type="float" />
+          <Property Name="productId" Type="int" Nullable="false" />
+          <Property Name="insuranceId" Type="int" Nullable="false" />
+          <Property Name="ageId" Type="int" />
+          <Property Name="discount" Type="float" />
+        </EntityType>
+        <EntityType Name="PRODUCTS_TBL">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="categoryId" Type="int" Nullable="false" />
+          <Property Name="imag" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="REQUEST_TBL">
+          <Key>
+            <PropertyRef Name="requestId" />
+          </Key>
+          <Property Name="categoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="parentCategory" Type="bit" Nullable="false" />
+          <Property Name="requestStatus" Type="int" />
+          <Property Name="requestKind" Type="int" Nullable="false" />
+          <Property Name="categoryId" Type="int" Nullable="false" />
+          <Property Name="requestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SATISFICATION_TBL">
+          <Key>
+            <PropertyRef Name="satisficationId" />
+          </Key>
+          <Property Name="satisficationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hmoId" Type="int" Nullable="false" />
+          <Property Name="satisficationOfWebsite" Type="float" />
+          <Property Name="satisficationOfHmo" Type="float" />
+          <Property Name="userId" Type="int" />
+          <Property Name="comment" Type="nvarchar" MaxLength="300" />
+          <Property Name="date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="USERS_TBL">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="nvarchar" MaxLength="30" />
+          <Property Name="tz" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="5" />
+          <Property Name="hmoId" Type="int" />
+          <Property Name="isAdmin" Type="bit" Nullable="false" />
+          <Property Name="adress" Type="nvarchar" MaxLength="50" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="telephone" Type="nvarchar" MaxLength="13" />
+          <Property Name="requestForm" Type="nvarchar" MaxLength="500" />
+          <Property Name="isConfirm" Type="bit" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <Association Name="FK_CATEGORIES_TBL_CATEGORIES_TBL">
+          <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+          <End Role="CATEGORIES_TBL1" Type="Self.CATEGORIES_TBL" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="CATEGORIES_TBL1">
+              <PropertyRef Name="categoriesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_INSURANCE_TBL_HMO_TBL">
+          <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="1" />
+          <End Role="INSURANCE_TBL" Type="Self.INSURANCE_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="INSURANCE_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRICE_AGE_TBL">
+          <End Role="AGE_TBL" Type="Self.AGE_TBL" Multiplicity="0..1" />
+          <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AGE_TBL">
+              <PropertyRef Name="ageId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="ageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRICE_INSURANCE_TBL">
+          <End Role="INSURANCE_TBL" Type="Self.INSURANCE_TBL" Multiplicity="1" />
+          <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSURANCE_TBL">
+              <PropertyRef Name="insuranceId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="insuranceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRICE_PRODUCTS_TBL">
+          <End Role="PRODUCTS_TBL" Type="Self.PRODUCTS_TBL" Multiplicity="1" />
+          <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTS_TBL">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCTS_TBL_CATEGORIES_TBL">
+          <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+          <End Role="PRODUCTS_TBL" Type="Self.PRODUCTS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="PRODUCTS_TBL">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REQUEST_TBL_CATEGORIES_TBL">
+          <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+          <End Role="REQUEST_TBL" Type="Self.REQUEST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="REQUEST_TBL">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REQUEST_TBL_USERS_TBL">
+          <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="1" />
+          <End Role="REQUEST_TBL" Type="Self.REQUEST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS_TBL">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="REQUEST_TBL">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SATISFICATION_TBL_HMO_TBL">
+          <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="1" />
+          <End Role="SATISFICATION_TBL" Type="Self.SATISFICATION_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="SATISFICATION_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USERS_TBL_HMO_TBL">
+          <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="0..1" />
+          <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="USERS_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HMO_PROGECTModelStoreContainer">
+          <EntitySet Name="AGE_TBL" EntityType="Self.AGE_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CATEGORIES_TBL" EntityType="Self.CATEGORIES_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HMO_TBL" EntityType="Self.HMO_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSURANCE_TBL" EntityType="Self.INSURANCE_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRICE" EntityType="Self.PRICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUCTS_TBL" EntityType="Self.PRODUCTS_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REQUEST_TBL" EntityType="Self.REQUEST_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SATISFICATION_TBL" EntityType="Self.SATISFICATION_TBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERS_TBL" EntityType="Self.USERS_TBL" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CATEGORIES_TBL_CATEGORIES_TBL" Association="Self.FK_CATEGORIES_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="CATEGORIES_TBL1" EntitySet="CATEGORIES_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_INSURANCE_TBL_HMO_TBL" Association="Self.FK_INSURANCE_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRICE_AGE_TBL" Association="Self.FK_PRICE_AGE_TBL">
+            <End Role="AGE_TBL" EntitySet="AGE_TBL" />
+            <End Role="PRICE" EntitySet="PRICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRICE_INSURANCE_TBL" Association="Self.FK_PRICE_INSURANCE_TBL">
+            <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+            <End Role="PRICE" EntitySet="PRICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRICE_PRODUCTS_TBL" Association="Self.FK_PRICE_PRODUCTS_TBL">
+            <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+            <End Role="PRICE" EntitySet="PRICE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCTS_TBL_CATEGORIES_TBL" Association="Self.FK_PRODUCTS_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REQUEST_TBL_CATEGORIES_TBL" Association="Self.FK_REQUEST_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REQUEST_TBL_USERS_TBL" Association="Self.FK_REQUEST_TBL_USERS_TBL">
+            <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+            <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SATISFICATION_TBL_HMO_TBL" Association="Self.FK_SATISFICATION_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="SATISFICATION_TBL" EntitySet="SATISFICATION_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USERS_TBL_HMO_TBL" Association="Self.FK_USERS_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HMO_PROGECTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HMO_PROGECTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AGE_TBL" EntityType="HMO_PROGECTModel.AGE_TBL" />
+          <EntitySet Name="CATEGORIES_TBL" EntityType="HMO_PROGECTModel.CATEGORIES_TBL" />
+          <EntitySet Name="HMO_TBL" EntityType="HMO_PROGECTModel.HMO_TBL" />
+          <EntitySet Name="INSURANCE_TBL" EntityType="HMO_PROGECTModel.INSURANCE_TBL" />
+          <EntitySet Name="PRICEs" EntityType="HMO_PROGECTModel.PRICE" />
+          <EntitySet Name="PRODUCTS_TBL" EntityType="HMO_PROGECTModel.PRODUCTS_TBL" />
+          <EntitySet Name="REQUEST_TBL" EntityType="HMO_PROGECTModel.REQUEST_TBL" />
+          <EntitySet Name="SATISFICATION_TBL" EntityType="HMO_PROGECTModel.SATISFICATION_TBL" />
+          <EntitySet Name="sysdiagrams" EntityType="HMO_PROGECTModel.sysdiagram" />
+          <EntitySet Name="USERS_TBL" EntityType="HMO_PROGECTModel.USERS_TBL" />
+          <AssociationSet Name="FK_PRICE_AGE_TBL" Association="HMO_PROGECTModel.FK_PRICE_AGE_TBL">
+            <End Role="AGE_TBL" EntitySet="AGE_TBL" />
+            <End Role="PRICE" EntitySet="PRICEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CATEGORIES_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="CATEGORIES_TBL1" EntitySet="CATEGORIES_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCTS_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REQUEST_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL">
+            <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+            <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_INSURANCE_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SATISFICATION_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="SATISFICATION_TBL" EntitySet="SATISFICATION_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USERS_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL">
+            <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+            <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRICE_INSURANCE_TBL" Association="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL">
+            <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+            <End Role="PRICE" EntitySet="PRICEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRICE_PRODUCTS_TBL" Association="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL">
+            <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+            <End Role="PRICE" EntitySet="PRICEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REQUEST_TBL_USERS_TBL" Association="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL">
+            <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+            <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AGE_TBL">
+          <Key>
+            <PropertyRef Name="ageId" />
+          </Key>
+          <Property Name="ageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="begins" Type="Int32" />
+          <Property Name="ends" Type="Int32" />
+          <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_AGE_TBL" FromRole="AGE_TBL" ToRole="PRICE" />
+        </EntityType>
+        <EntityType Name="CATEGORIES_TBL">
+          <Key>
+            <PropertyRef Name="categoriesId" />
+          </Key>
+          <Property Name="categoriesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parentCategory" Type="Int32" />
+          <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Boolean" />
+          <NavigationProperty Name="CATEGORIES_TBL1" Relationship="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="CATEGORIES_TBL1" />
+          <NavigationProperty Name="CATEGORIES_TBL2" Relationship="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL1" ToRole="CATEGORIES_TBL" />
+          <NavigationProperty Name="PRODUCTS_TBL" Relationship="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="PRODUCTS_TBL" />
+          <NavigationProperty Name="REQUEST_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="REQUEST_TBL" />
+        </EntityType>
+        <EntityType Name="HMO_TBL">
+          <Key>
+            <PropertyRef Name="hmoId" />
+          </Key>
+          <Property Name="hmoId" Type="Int32" Nullable="false" />
+          <Property Name="hmoName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hmoMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="INSURANCE_TBL" Relationship="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="INSURANCE_TBL" />
+          <NavigationProperty Name="SATISFICATION_TBL" Relationship="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="SATISFICATION_TBL" />
+          <NavigationProperty Name="USERS_TBL" Relationship="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="USERS_TBL" />
+        </EntityType>
+        <EntityType Name="INSURANCE_TBL">
+          <Key>
+            <PropertyRef Name="insuranceId" />
+          </Key>
+          <Property Name="insuranceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hmoId" Type="Int32" Nullable="false" />
+          <Property Name="insuranceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InsurancePrice" Type="Double" />
+          <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL" FromRole="INSURANCE_TBL" ToRole="HMO_TBL" />
+          <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL" FromRole="INSURANCE_TBL" ToRole="PRICE" />
+        </EntityType>
+        <EntityType Name="PRICE">
+          <Key>
+            <PropertyRef Name="priceId" />
+          </Key>
+          <Property Name="priceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="priceText" Type="Double" />
+          <Property Name="productId" Type="Int32" Nullable="false" />
+          <Property Name="insuranceId" Type="Int32" Nullable="false" />
+          <Property Name="ageId" Type="Int32" />
+          <Property Name="discount" Type="Double" />
+          <NavigationProperty Name="AGE_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_AGE_TBL" FromRole="PRICE" ToRole="AGE_TBL" />
+          <NavigationProperty Name="INSURANCE_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL" FromRole="PRICE" ToRole="INSURANCE_TBL" />
+          <NavigationProperty Name="PRODUCTS_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL" FromRole="PRICE" ToRole="PRODUCTS_TBL" />
+        </EntityType>
+        <EntityType Name="PRODUCTS_TBL">
+          <Key>
+            <PropertyRef Name="productId" />
+          </Key>
+          <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="categoryId" Type="Int32" Nullable="false" />
+          <Property Name="imag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CATEGORIES_TBL" Relationship="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="PRODUCTS_TBL" ToRole="CATEGORIES_TBL" />
+          <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL" FromRole="PRODUCTS_TBL" ToRole="PRICE" />
+        </EntityType>
+        <EntityType Name="REQUEST_TBL">
+          <Key>
+            <PropertyRef Name="requestId" />
+          </Key>
+          <Property Name="categoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parentCategory" Type="Boolean" Nullable="false" />
+          <Property Name="requestStatus" Type="Int32" />
+          <Property Name="requestKind" Type="Int32" Nullable="false" />
+          <Property Name="categoryId" Type="Int32" Nullable="false" />
+          <Property Name="requestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CATEGORIES_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="REQUEST_TBL" ToRole="CATEGORIES_TBL" />
+          <NavigationProperty Name="USERS_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL" FromRole="REQUEST_TBL" ToRole="USERS_TBL" />
+        </EntityType>
+        <EntityType Name="SATISFICATION_TBL">
+          <Key>
+            <PropertyRef Name="satisficationId" />
+          </Key>
+          <Property Name="satisficationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hmoId" Type="Int32" Nullable="false" />
+          <Property Name="satisficationOfWebsite" Type="Double" />
+          <Property Name="satisficationOfHmo" Type="Double" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL" FromRole="SATISFICATION_TBL" ToRole="HMO_TBL" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USERS_TBL">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="tz" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="hmoId" Type="Int32" />
+          <Property Name="isAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telephone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="requestForm" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="isConfirm" Type="Boolean" />
+          <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL" FromRole="USERS_TBL" ToRole="HMO_TBL" />
+          <NavigationProperty Name="REQUEST_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL" FromRole="USERS_TBL" ToRole="REQUEST_TBL" />
+        </EntityType>
+        <Association Name="FK_PRICE_AGE_TBL">
+          <End Type="HMO_PROGECTModel.AGE_TBL" Role="AGE_TBL" Multiplicity="0..1" />
+          <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AGE_TBL">
+              <PropertyRef Name="ageId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="ageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CATEGORIES_TBL_CATEGORIES_TBL">
+          <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="CATEGORIES_TBL1">
+              <PropertyRef Name="categoriesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCTS_TBL_CATEGORIES_TBL">
+          <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.PRODUCTS_TBL" Role="PRODUCTS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="PRODUCTS_TBL">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REQUEST_TBL_CATEGORIES_TBL">
+          <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.REQUEST_TBL" Role="REQUEST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIES_TBL">
+              <PropertyRef Name="categoriesId" />
+            </Principal>
+            <Dependent Role="REQUEST_TBL">
+              <PropertyRef Name="categoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_INSURANCE_TBL_HMO_TBL">
+          <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.INSURANCE_TBL" Role="INSURANCE_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="INSURANCE_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SATISFICATION_TBL_HMO_TBL">
+          <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.SATISFICATION_TBL" Role="SATISFICATION_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="SATISFICATION_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USERS_TBL_HMO_TBL">
+          <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="0..1" />
+          <End Type="HMO_PROGECTModel.USERS_TBL" Role="USERS_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HMO_TBL">
+              <PropertyRef Name="hmoId" />
+            </Principal>
+            <Dependent Role="USERS_TBL">
+              <PropertyRef Name="hmoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRICE_INSURANCE_TBL">
+          <End Type="HMO_PROGECTModel.INSURANCE_TBL" Role="INSURANCE_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INSURANCE_TBL">
+              <PropertyRef Name="insuranceId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="insuranceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRICE_PRODUCTS_TBL">
+          <End Type="HMO_PROGECTModel.PRODUCTS_TBL" Role="PRODUCTS_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTS_TBL">
+              <PropertyRef Name="productId" />
+            </Principal>
+            <Dependent Role="PRICE">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REQUEST_TBL_USERS_TBL">
+          <End Type="HMO_PROGECTModel.USERS_TBL" Role="USERS_TBL" Multiplicity="1" />
+          <End Type="HMO_PROGECTModel.REQUEST_TBL" Role="REQUEST_TBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USERS_TBL">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="REQUEST_TBL">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HMO_PROGECTModelStoreContainer" CdmEntityContainer="HMO_PROGECTEntities">
+          <EntitySetMapping Name="AGE_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.AGE_TBL">
+              <MappingFragment StoreEntitySet="AGE_TBL">
+                <ScalarProperty Name="ends" ColumnName="ends" />
+                <ScalarProperty Name="begins" ColumnName="begins" />
+                <ScalarProperty Name="ageId" ColumnName="ageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORIES_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.CATEGORIES_TBL">
+              <MappingFragment StoreEntitySet="CATEGORIES_TBL">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="createBy" ColumnName="createBy" />
+                <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="categoriesId" ColumnName="categoriesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HMO_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.HMO_TBL">
+              <MappingFragment StoreEntitySet="HMO_TBL">
+                <ScalarProperty Name="hmoMail" ColumnName="hmoMail" />
+                <ScalarProperty Name="hmoName" ColumnName="hmoName" />
+                <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSURANCE_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.INSURANCE_TBL">
+              <MappingFragment StoreEntitySet="INSURANCE_TBL">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="InsurancePrice" ColumnName="InsurancePrice" />
+                <ScalarProperty Name="insuranceName" ColumnName="insuranceName" />
+                <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+                <ScalarProperty Name="insuranceId" ColumnName="insuranceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRICEs">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.PRICE">
+              <MappingFragment StoreEntitySet="PRICE">
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="ageId" ColumnName="ageId" />
+                <ScalarProperty Name="insuranceId" ColumnName="insuranceId" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="priceText" ColumnName="priceText" />
+                <ScalarProperty Name="priceId" ColumnName="priceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTS_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.PRODUCTS_TBL">
+              <MappingFragment StoreEntitySet="PRODUCTS_TBL">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="imag" ColumnName="imag" />
+                <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REQUEST_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.REQUEST_TBL">
+              <MappingFragment StoreEntitySet="REQUEST_TBL">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="requestId" ColumnName="requestId" />
+                <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+                <ScalarProperty Name="requestKind" ColumnName="requestKind" />
+                <ScalarProperty Name="requestStatus" ColumnName="requestStatus" />
+                <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SATISFICATION_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.SATISFICATION_TBL">
+              <MappingFragment StoreEntitySet="SATISFICATION_TBL">
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="satisficationOfHmo" ColumnName="satisficationOfHmo" />
+                <ScalarProperty Name="satisficationOfWebsite" ColumnName="satisficationOfWebsite" />
+                <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+                <ScalarProperty Name="satisficationId" ColumnName="satisficationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS_TBL">
+            <EntityTypeMapping TypeName="HMO_PROGECTModel.USERS_TBL">
+              <MappingFragment StoreEntitySet="USERS_TBL">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="isConfirm" ColumnName="isConfirm" />
+                <ScalarProperty Name="requestForm" ColumnName="requestForm" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="adress" ColumnName="adress" />
+                <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+                <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="tz" ColumnName="tz" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
