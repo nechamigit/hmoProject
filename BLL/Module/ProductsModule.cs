@@ -35,20 +35,18 @@ namespace BLL.Module
         //    }
         //}
 
-        public static List<ProductPrices> getProductByKriterion(PRODUCTS_TBL product, AGE_TBL age)
+        public static List<ProductPrices> getProductByKriterion(int productId)
         {
             using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
             {
-
-               return (from prc in ctx.PRICEs
+                var product = ctx.PRODUCTS_TBL.FirstOrDefault(i => i.productId == productId);
+               List<ProductPrices> listOfProductPrice = (from prc in ctx.PRICEs
                               join ins in ctx.INSURANCE_TBL on prc.insuranceId equals ins.insuranceId
                               join hmo in ctx.HMO_TBL on ins.hmoId equals hmo.hmoId
-                              where prc.ageId == age.ageId && prc.productId == product.productId
+                              where  prc.productId == productId
                               select new ProductPrices
                               {
-                                  AgeBegin = age.begins,
-                                  AgeEnd = age.ends,
-                                  AgeId = age.ageId,
+                                  AgeId = prc.ageId,
                                   Discount = prc.discount,
                                   HmoId = hmo.hmoId,
                                   HmoName = hmo.hmoName,
@@ -56,9 +54,20 @@ namespace BLL.Module
                                   InsuranceName = ins.insuranceName,
                                   PriceId = prc.priceId,
                                   PriceText = prc.priceText,
-                                  ProductId = product.productId,
+                                  ProductId = productId,
                                   ProductName = product.name
                               }).ToList();
+                var listAge = ctx.AGE_TBL.ToList();
+                foreach (var age in listAge)
+                {
+                    var listOfRelevantAge= listOfProductPrice.Where(i => i.AgeId == age.ageId).ToList();
+                    foreach (var relevantAge in listOfRelevantAge)
+                    {
+                        relevantAge.AgeBegin = age.begins;
+                        relevantAge.AgeEnd = age.ends;
+                    }
+                }
+                return listOfProductPrice;
             }
         }
 
@@ -78,7 +87,7 @@ namespace BLL.Module
             public string HmoName { get; set; }
 
 
-            public int AgeId { get; set; }
+            public int? AgeId { get; set; }
 
             public int? AgeBegin { get; set; }
 

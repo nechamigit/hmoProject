@@ -15,7 +15,7 @@ namespace WebApi.Controllers
     public class CategoryTreeController : ApiController
     {
         [HttpGet]
-        [Route("get")]
+        //[Route("get")]
         public List<CategoryTree> GetCategoryTree()
         {
             using (HMO_PROGECTEntities db = new HMO_PROGECTEntities())
@@ -47,6 +47,7 @@ namespace WebApi.Controllers
                 };
                 AddChildernForNode(db, category, allCategoriesList);
                 categoryTree.children.Add(category);
+
             }
         }
 

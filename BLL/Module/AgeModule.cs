@@ -25,5 +25,17 @@ namespace BLL.Module
                 return ages;
             }
         }
+        public static AGE_DTO getRange(int age)
+        {
+            using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+            {
+               AGE_TBL ages= ctx.AGE_TBL.Where(p => p.begins <= age && p.ends <= age).FirstOrDefault();
+                if(ages!=null)
+                {
+                    return AGE_Casting.CastToDTO(ages);
+                }
+                return null;
+            }               
+        }
     }
 }

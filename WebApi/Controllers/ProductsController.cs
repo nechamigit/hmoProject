@@ -60,12 +60,12 @@ namespace WebApi.Controllers
 
         }
         [HttpGet]
-        [Route("GetProductPrice")]
-        public IHttpActionResult GetProductPrice(PRODUCTS_TBL product)
+        [Route("getProductByKriterion")]
+        public IHttpActionResult getProductByKriterion(int productId)
         {
             try
             {
-                PriceModule.GetProductPrice(product);
+                ProductsModule.getProductByKriterion(productId);
                 return Ok();
             }
             catch (Exception)
@@ -106,15 +106,15 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [Route("GetAll")]
-        public IHttpActionResult GetAll(int productId, int age)
+        [Route("GetAll/{id}")]
+        public IHttpActionResult GetAll(int id)
         {
             try
             {
                 using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
                 {
 
-                    ProductsModule.getProductByKriterion(ctx.PRODUCTS_TBL.Find(productId), ctx.AGE_TBL.Find(age));
+                    ProductsModule.getProductByKriterion(id);
                 }
                 return Ok();
             }

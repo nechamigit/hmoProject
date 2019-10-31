@@ -12,7 +12,6 @@ using DTO;
 namespace WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-
     [RoutePrefix("Category")]
     public class CategoryController : ApiController
     {
