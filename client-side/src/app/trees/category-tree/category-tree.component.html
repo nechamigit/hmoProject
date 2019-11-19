@@ -8,8 +8,9 @@
     <!-- <h3>Filter By Function (Fuzzy Search)</h3>
     <input id="filter3" #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)"
         placeholder="filter nodes by fuzzy search" /> -->
-
+<div class="filterNode">
 <input [(ngModel)]="searchText" (keyup)="search($event)" placeholder="filter nodes"/>
+</div>
 <div class="tree" #tree>
     <tree-root [nodes]="nodes" [options]="options">
         <ng-template #treeNodeTemplate let-node let-index="index">

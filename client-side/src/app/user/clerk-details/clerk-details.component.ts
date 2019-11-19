@@ -35,8 +35,7 @@ export class ClerkDetailsComponent   {
     {
       this.isNew=false;
       this.userService.getClerkById(id).subscribe((res:ClerkDetails)=>{
-        this.clerk=res;
-
+      this.clerk=res;
       })
     }
     else
@@ -45,13 +44,14 @@ export class ClerkDetailsComponent   {
       this.clerk=new ClerkDetails();
 
     }
-    this.userService.getAllHmos().subscribe((res: Array<Hmo>)=> {
+      this.userService.getAllHmos().subscribe((res: Array<Hmo>)=> {
       this.hmos = res;
     });
     this.userType = localStorage.getItem("currentUser") ? localStorage.getItem("currentUser") : " ";
   }
   
   confirmClerk() { }
+
   save(clerk) {
     if(this.isNew)
     {
@@ -63,7 +63,9 @@ export class ClerkDetailsComponent   {
          }
          else
          {
-           console.log("hello");
+          this.userService.save(this.clerk).subscribe(
+            (res:string)=>
+            console.log("פקיד נרשם"))
           //  localStorage.setItem("currentUser",res);
           //  console.log(res);
           //  this.router.navigate(['main']);
@@ -73,6 +75,13 @@ export class ClerkDetailsComponent   {
           console.error('שגיאה אירעה:' + err);  
         }
       ) 
+      }
+      else{
+        // console.log("error");//קוד עדכון
+        this.userService.Update(this.clerk).subscribe(
+          (res:string)=>
+          console.log("פקיד עודכן")
+        );
       }
   } 
   changeStatus(){
@@ -92,8 +101,14 @@ console.log(this.clerk.isConfirm);
   );
 
 }  
+update(){
+  this.userService.Update(this.clerk).subscribe(
+    (res:ClerkDetails)=>{
+      this.clerk=res;
+    }
+  )
+}
 
- 
  
   // delete(){
   //   this.userService.delete(this.clerk).subscribe(

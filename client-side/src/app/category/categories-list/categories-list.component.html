@@ -1,46 +1,72 @@
 <form>
-    <div>
-        <button (click)="searchVal='tree'">חיפוש קל</button>
-        <button (click)="searchVal='search'">חיפוש מורכב</button>
-    </div>
-    <app-category-tree [hidden]="searchVal!='tree'" (nodeClicked)="logNode($event)"></app-category-tree>
-    <div *ngIf="searchVal=='search'">
-        <form class="example-form">
+    <div class="param">
+        <div class="search-div">
+
+            <div class="searchButton">
+            <div class="simpleSearch">
+                <button (click)="searchVal='tree'">חיפוש קל</button>
+            </div>
+            <div class="complexSearch">
+                <button (click)="searchVal='search'">חיפוש מורכב</button>
+            </div>
+            </div>
+            <div class="treee">
+            <div class="tree" [hidden]="searchVal!='tree'">
+                <app-category-tree  (nodeClicked)="logNode($event)"></app-category-tree>
+            </div>
+        </div>
+
+            <!-- <div *ngIf="searchVal=='search'">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" placeholder="קטגוריה" aria-label="Number" matInput [formControl]="myControl"
+                        [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
+                        (optionSelected)="onSelectedOption($event)">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option.categoryName}}
+                        </mat-option>
+                    </mat-autocomplete>
+            </mat-form-field>F
+        </form>
+    </div> -->
+    <div class="complex" *ngIf="searchVal!='tree'" >
+        <!-- <div class="search" [hidden]="HideFildes=='tree'"> -->
+            <!-- <mat-form-field class="example"> -->
+            <!-- <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="product.name"> -->
+            <!-- </mat-form-field> -->
             <mat-form-field class="example-full-width">
-                <input type="text" placeholder="קטגוריה" aria-label="Number" matInput [formControl]="myControl"
-                    [matAutocomplete]="auto">
-                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
-                    (optionSelected)="onSelectedOption($event)">
+                <input type="text" placeholder="חיפוש" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onSelectedOption($event)">
                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                         {{option.categoryName}}
                     </mat-option>
                 </mat-autocomplete>
             </mat-form-field>
-        </form>
+            <div class="row">
+                <mat-form-field class="example">
+                    <input type="number" matInput placeholder="גיל" name="age" required>
+                </mat-form-field>
+            </div>
+            <!-- <div class="row">
+                <mat-form-field>
+                    <mat-label>קופת חולים</mat-label>
+                    <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
+                        <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoId">
+                            {{hmo.hmoName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div> -->
+            <button (click)="compareS()">search</button>
+        </div>
     </div>
-    <div class="row">
-        <mat-form-field class="example">
-            <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="product.name">
-        </mat-form-field>
+    <div class="products-list">
+
+        <app-category-details *ngIf="searchVal=='tree'" #categoryDetails></app-category-details>
+        <div *ngIf="searchVal=='search'">
+            <!-- <app-product-card *ngFor="let product of ProductsList" [(product)]="product"></app-product-card> -->
+        </div>
     </div>
-    <div class="row">
-        <mat-form-field class="example">
-            <input type="number" matInput placeholder="גיל" name="age" required>
-        </mat-form-field>
-    </div>
-    <div class="row">
-        <mat-form-field>
-          <mat-label>קופת חולים</mat-label>
-           <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
-            <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoName">
-              {{hmo.hmoName}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-    <button>search</button>
-    <app-category-details *ngIf="searchVal=='tree'" #categoryDetails></app-category-details>
-    <div *ngIf="searchVal=='search'">
-        <!-- <app-product-card *ngFor="let product of ProductsList" [(product)]="product"></app-product-card> -->
     </div>
 </form>

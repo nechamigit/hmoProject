@@ -1,5 +1,6 @@
 <form *ngIf="request">
-  <h1>request</h1>
+  <div class="requestForm">
+  <h1>בקשת הפקיד</h1>
   <div class="row">
     <mat-form-field class="example">
       <input type="text" matInput placeholder="שם פקיד" name="userName" required [(ngModel)]="request.user.userName">
@@ -24,6 +25,8 @@
     <mat-form-field class="example">
       <input type="text" matInput placeholder="סוג בקשה" name="requestKind" required [(ngModel)]="request.requestKind">
     </mat-form-field>
+  </div>
+  <button (click)="confirm()" >אישור</button>
   </div>
   <!-- <button type="submit">save</button>
   <div class="example-button-row">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d36c7ead18074bb78102d64ee0b3f322" Name="Diagram1">
+        <EntityTypeShape EntityType="HMO_PROGECTModel.AGE_TBL" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.CATEGORIES_TBL" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.HMO_TBL" Width="1.5" PointX="1.5" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.INSURANCE_TBL" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.PRICE" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.PRODUCTS_TBL" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.REQUEST_TBL" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.SATISFICATION_TBL" Width="1.5" PointX="3.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HMO_PROGECTModel.USERS_TBL" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_PRICE_AGE_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL" ManuallyRouted="false" />
+        <AssociationConnector Association="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

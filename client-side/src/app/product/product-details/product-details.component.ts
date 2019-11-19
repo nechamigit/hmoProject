@@ -21,13 +21,11 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((data) => {
       this.product.categoryId = +data.parentId;
-      // this.product.parentCategory=this.productService.categories.find(f=>f.Id=this.product.categoryId);
       return this.productService.getAllHmos().subscribe((res: Array<Hmo>) => {
         this.hmos = res;
 
       })
     })
-    // this.product.categoryId=+this.route.snapshot.paramMap.get('parentId');
   }
   addProduct() {
     this.router.navigate(["addProduct", { parentId: this.selectedCategory.Id }])
@@ -46,4 +44,5 @@ export class ProductDetailsComponent implements OnInit {
       }
     })
   }
+
 }

@@ -15,6 +15,10 @@ categories;
   getProductById(id:number){
     return this.http.get(environment.baseRoute+"products/readById/"+id);
   }
+
+  getComperation(id:number){
+    return this.http.get(environment.baseRoute+"Category/GetComperation/"+id);
+  }
   save(product){
     return this.http.post(environment.baseRoute+"products/Create",product)
      }
@@ -28,5 +32,7 @@ categories;
   {
     return this.http.post(environment.baseRoute+"products/Delete",product);
   }
- 
+  confirm(requestForCAtegory){
+    return this.http.post(environment.baseRoute+"request/changeConfirm",requestForCAtegory)
+  }
 }

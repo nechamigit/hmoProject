@@ -16,7 +16,7 @@ namespace BLL.CRUD
         static HMO_PROGECTEntities ctx = new HMO_PROGECTEntities();
         public static void Create(USERS_DTO user)
         {
-            USERS_TBL newUser = ctx.USERS_TBL.Where(u => u.password == user.password).FirstOrDefault();
+            USERS_TBL newUser = ctx.USERS_TBL.Where(u =>u.userId==user.userId||u.userName==user.userName).FirstOrDefault();
             if (newUser == null)
             {
                 ctx.USERS_TBL.Add(new USERS_TBL()
@@ -65,7 +65,7 @@ namespace BLL.CRUD
         //{
         //    return ctx.PRODUCTS_TBL.ToList();
         //}
-        public static USERS_DTO Update(USERS_DTO user)
+        public static USERS_DTO UpdateConfirm(USERS_DTO user)
         {
             //USERS_DTO userToUpdate =ReadById(ctx, user.userId);
             //userToUpdate.isConfirm = true;
@@ -73,9 +73,25 @@ namespace BLL.CRUD
             //return userToUpdate;
             var change= ctx.USERS_TBL.FirstOrDefault(u => u.password == user.password);
             change.isConfirm = !change.isConfirm;
+
+
             ctx.SaveChanges();
             return Casting.USERS_Casting.CastToDTO(change);    
         }
+		public static void Update(USERS_DTO user)
+		{
+			var x = ctx.USERS_TBL.FirstOrDefault(u => u.userId == user.userId);
+			x.userName = user.userName;
+			x.tz = user.tz;
+			x.telephone = user.telephone;
+			x.password = user.password;
+			x.mail = user.mail;
+			x.lastName = user.lastName;
+			x.isConfirm = user.isConfirm;
+			x.isActive = user.isActive;
+			x.hmoId = user.hmoId;
+			ctx.SaveChanges();
+		}
     }
 }
 

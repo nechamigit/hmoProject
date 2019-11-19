@@ -52,7 +52,8 @@ namespace BLL.Module
                                   HmoName = hmo.hmoName,
                                   InsuranceId = ins.insuranceId,
                                   InsuranceName = ins.insuranceName,
-                                  PriceId = prc.priceId,
+								  InsurancePrice=ins.InsurancePrice,
+								  PriceId = prc.priceId,
                                   PriceText = prc.priceText,
                                   ProductId = productId,
                                   ProductName = product.name
@@ -82,8 +83,9 @@ namespace BLL.Module
 
             public int InsuranceId { get; set; }
             public string InsuranceName { get; set; }
+			public double? InsurancePrice { get; set; }
 
-            public int HmoId { get; set; }
+			public int HmoId { get; set; }
             public string HmoName { get; set; }
 
 

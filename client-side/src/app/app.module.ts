@@ -34,7 +34,9 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
 import {MatButtonModule} from '@angular/material/button';
 import {RequestTableComponent} from './manager/request-table/request-table.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-category.component'; 
+import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-category.component';
+import { AboutComponent } from './about/about.component';
+import { HierarchyComponent } from './hierarchy/hierarchy.component';
 // import { ProductDetailsComponent } from './product/product-details/product-details.component';
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-ca
     ViewProductComponent,
     RequestTableComponent,
     ProductCardComponent,
-    ViewSubCategoryComponent
+    ViewSubCategoryComponent,
+    AboutComponent,
+    HierarchyComponent,
     // ReactiveFormsModule
     
   ],

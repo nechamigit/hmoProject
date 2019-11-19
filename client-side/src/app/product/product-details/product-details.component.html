@@ -18,11 +18,26 @@
     </div>
     <div class="row">
       <mat-form-field class="example">
+          <mat-label>ביטוח</mat-label>
         <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="product.insurance">
       </mat-form-field>
     </div>
+    <!-- <div class="row">
+    <mat-form-field>
+        <mat-label>ביטוח</mat-label>
+         <mat-select [(ngModel)]="clerk.insurance" [ngModelOptions]="{standalone: true}">
+          <mat-option *ngFor="let insurance of insurance" [value]="clerk.insurance">
+            {{insurance.hmoName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+
+
+
     <div class="row">
       <mat-form-field class="example">
+        
         <input type="text" matInput placeholder="קטגוריית אב" name="parentCategory" required [(ngModel)]="product.parentCategory">
         {{product.categoryId}}
       </mat-form-field>

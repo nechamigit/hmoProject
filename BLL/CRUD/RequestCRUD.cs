@@ -22,7 +22,7 @@ namespace BLL.CRUD
         //readList
         public static List<REQUEST_DTO> read()
         {
-            var x = ctx.REQUEST_TBL.Where(u => u.requestKind == 2).ToList().Select(u => Casting.REQUEST_Casting.CastToDTO(u)).ToList();
+            var x = ctx.REQUEST_TBL.ToList().Select(u => Casting.REQUEST_Casting.CastToDTO(u)).ToList();
             return x;
         }
         //create

@@ -1,0 +1,12 @@
+C:\git\hmoProject\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+C:\git\hmoProject\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\git\hmoProject\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\git\hmoProject\ClassLibrary1\bin\Debug\EntityFramework.dll
+C:\git\hmoProject\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\git\hmoProject\ClassLibrary1\bin\Debug\EntityFramework.xml
+C:\git\hmoProject\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+C:\git\hmoProject\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+C:\git\hmoProject\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\git\hmoProject\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
+C:\git\hmoProject\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\git\hmoProject\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

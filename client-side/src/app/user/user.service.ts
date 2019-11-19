@@ -16,6 +16,9 @@ export class UserService {
   {
     return this.http.get(environment.baseRoute+"clerk/readById/"+id);
   }
+  Update(clerk:ClerkDetails){
+    return this.http.post(environment.baseRoute+"clerk/Update",clerk)
+  }
   delete(clerk:ClerkDetails){
     // return this.http.post(this.baseRoute+"Account?userName="+userName+"&password="+password,null);
       return this.http.post(environment.baseRoute+"clerk/delete",clerk);
@@ -24,7 +27,7 @@ export class UserService {
       return this.http.get(environment.baseRoute+"hmo/GetAllhmo");
     }
     changeStatus(clerk){
-      return this.http.post(environment.baseRoute+"clerk/update",clerk);
+      return this.http.post(environment.baseRoute+"clerk/UpdateConfirm",clerk);
     }
      
 }

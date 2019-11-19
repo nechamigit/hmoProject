@@ -1,5 +1,7 @@
-<form *ngIf="clerk" (ngSubmit)="save()">
-  <h1>clerk</h1>
+<form> 
+  <div class="editClerk">
+    <!-- <form *ngIf="clerk" (ngSubmit)="save(clerk)"> -->
+  <h1>פרטי פקיד</h1>
   <div class="row">
     <mat-form-field class="example">
       <input type="text" matInput placeholder="ת.ז" name="userTz" required [(ngModel)]="clerk.tz">
@@ -29,8 +31,8 @@
   <mat-form-field>
     <mat-label>קופת חולים</mat-label>
      <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
-      <mat-option *ngFor="let hmo of hmos" [value]="clerk.hmoId">
-        {{hmo.hmoName}}
+      <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoId">
+        {{hmo.hmoName}} 
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -42,7 +44,7 @@
       <input type="text" matInput placeholder="כתובת" name="address" required [(ngModel)]="clerk.address">
     </mat-form-field>
   </div>
-
+ 
   <div class="row">
     <mat-form-field class="example">
       <input type="text" matInput placeholder="מייל" name="mail" required [(ngModel)]="clerk.mail">
@@ -53,12 +55,16 @@
       <input type="text" matInput placeholder="טלפון" name="telephone" required [(ngModel)]="clerk.telephone">
     </mat-form-field>
   </div>
-  <button type="submit">save</button>
+  <div class="confirmClerk">
+  <button (click)="changeStatus(clerk)">אישור</button>
+</div>
+  <!-- <button type="submit">save</button> -->
   <div class="example-button-row">
-    <button mat-fab color="primary">update</button>
+    <button mat-fab color="primary" (click)= "update(clerk)">update</button>
     <button mat-fab color="primary" (click)="deleteClerk()">-</button>
     <button mat-fab color="primary" (click)="changeStatus()">+</button>
   </div>
+</div>
 </form>
 
         <!-- requestForm:string; -->

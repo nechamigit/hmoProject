@@ -1,17 +1,21 @@
+<div *ngIf="product">
+
+
 <form>
+
 <div class="productView">
-<h1>{{product.name}}</h1>
+<!-- <h1>{{product.name}}</h1> -->
 <div class="row">
     <mat-form-field class="example">
       <input type="text" matInput placeholder="תאור" name="description" [(ngModel)]="product.description">{{product.description}}
     </mat-form-field>
 </div>
-  <div class="row">
+  <!-- <div class="row">
        <mat-form-field class="example">{{product.price}}
            <input type="text" matInput placeholder="מחיר" name="price" required [(ngModel)]="product.price">  
          </mat-form-field> 
- </div>
-<div class="row">
+ </div> -->
+<!-- <div class="row">
         <mat-form-field class="example">
         <input type="text" matInput placeholder="גיל"  name="age" required [(ngModel)]="product.age">
         </mat-form-field>
@@ -25,11 +29,16 @@
         <mat-form-field class="example">
         <input type="text" matInput placeholder="קופת חולים" name="hmo" required [(ngModel)]="product.hmo">
         </mat-form-field>
-</div>
+</div> -->
 <button *ngIf="isEdit">edit</button>
 <button (click)="save">שמור</button>
+<button (click)="compare()">השווה</button>
 </div>
 </form>
+<app-view-sub-category  #viewSubCategory [hidden]="!showTable">
+
+</app-view-sub-category>
+</div>
 
 
 

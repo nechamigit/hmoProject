@@ -7,9 +7,11 @@ using DTO;
 using BLL.CRUD;
 using DAL;
 
-namespace BLL.Module
 
+namespace BLL.Module
+	
 {
+
     public static class RequestModule
     {
         public static REQUEST_DTO getRequestById(int id)
@@ -20,5 +22,17 @@ namespace BLL.Module
             }
 
         }
+		public static void changeConfirm( int requestid)
+		{
+			using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+			{
+			var x=	ctx.REQUEST_TBL.FirstOrDefault(u => u.requestId == requestid);
+				x.requestStatus = 2;
+				ctx.SaveChanges();
+	
+			}
+			
+
+		}
     }
 }
