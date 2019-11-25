@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private loginS: LoginService, private router: Router) { }
 
   ngOnInit() {
-    this.login();
+    //this.login();
   }
 
   login()
@@ -26,7 +26,10 @@ export class LoginComponent implements OnInit {
       {
         if (res == null)
        {
+
+         
           console.error('שם משתמש וסיסמא ללקוח ומנהל בלבד');
+          alert('שם משתמש וסיסמא ללקוח ומנהל בלבד')
         }
         else if(res=='clerk')
         {
@@ -43,6 +46,7 @@ export class LoginComponent implements OnInit {
 
       (err) => {
         console.error('שגיאה אירעה:' + err);
+       
       }
     )
   }
