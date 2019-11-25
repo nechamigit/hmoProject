@@ -40,9 +40,9 @@ namespace WebApi.Controllers
 				UserCRUD.Delete(user);
 				return Ok();
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				return InternalServerError();
+				return InternalServerError(ex);
 			}
 		}
 		[HttpGet]
@@ -101,7 +101,7 @@ namespace WebApi.Controllers
 			catch (Exception e)
 			{
 
-				return InternalServerError();
+				return InternalServerError(e);
 			}
 		}
 	}
