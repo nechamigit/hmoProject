@@ -22,6 +22,9 @@ namespace BLL.Casting
                 password = a.password,
                 telephone = a.telephone,
                 tz = a.tz,
+				lastName=a.lastName,
+				firstName=a.firstName,
+				hmoId=a.hmoId,
                 userId=a.userId,
                 isConfirm=a.isConfirm,
                 requestForm =a.requestForm,
@@ -42,6 +45,8 @@ namespace BLL.Casting
                 telephone = a.telephone,
                 tz = a.tz,
                 userId = a.userId,
+				firstName=a.firstName,
+				lastName=a.lastName,
                 isConfirm = a.isConfirm,
                 requestForm = a.requestForm,
                 isActive=a.isActive
