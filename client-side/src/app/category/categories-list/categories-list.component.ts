@@ -13,6 +13,7 @@ import { productDetails } from 'src/app/model/product-details';
 import { ClerkDetails } from 'src/app/model/clerkDetails';
 import { Hmo } from 'src/app/model/Hmo';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-categories-list',
   templateUrl: './categories-list.component.html',
@@ -20,7 +21,7 @@ import { Observable } from 'rxjs';
 })
 export class CategoriesListComponent implements OnInit {
   myControl = new FormControl();
-  constructor(private catServ: CategoryService) { }
+  constructor(private catServ: CategoryService,private route:Router) { }
   @ViewChild('categoryDetails', { static: false }) child: CategoryDetailsComponent;
   searchVal: string = "tree";
   // Field:boolean=true;
@@ -96,5 +97,8 @@ export class CategoriesListComponent implements OnInit {
   //       this.showTable=true;
   //     })
   // }
+  compareS(){
+    this.route.navigate(['price']);
+  }
 
 }
