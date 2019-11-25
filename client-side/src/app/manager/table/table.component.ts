@@ -4,9 +4,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatTableModule} from '@angular/material/table';
 import { ManagerService } from '../manager.service';
 import { Users } from 'src/app/model/Users';
-import { Route, Router } from '@angular/router';
+import { Route, Router, ActivatedRoute } from '@angular/router';
 import { element } from 'protractor';
-
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -42,9 +41,16 @@ export interface PeriodicElement {
   selection; 
  
   users:Users[]
-constructor(private service:ManagerService,private router:Router)
+constructor(private service:ManagerService,private router:Router, private route:ActivatedRoute)
 {
- 
+  route.params.subscribe(val => {
+    this.service.getClerck().subscribe((res)=>{
+      this.users=res;
+      this.dataSource = new MatTableDataSource<Users>(this.users);
+
+    })
+   this.selection== new SelectionModel<Users>(true, []);
+  });
 }
 
   ngOnInit(){

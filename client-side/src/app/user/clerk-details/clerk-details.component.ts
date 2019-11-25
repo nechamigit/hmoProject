@@ -47,9 +47,10 @@ export class ClerkDetailsComponent   {
       this.userService.getAllHmos().subscribe((res: Array<Hmo>)=> {
       this.hmos = res;
     });
+    
     this.userType = localStorage.getItem("currentUser") ? localStorage.getItem("currentUser") : " ";
   }
-  
+
   confirmClerk() { }
 
   save(clerk) {
@@ -59,13 +60,16 @@ export class ClerkDetailsComponent   {
        (res:string)=>{
          if(res==""||res==null)
          {
-           console.error('לקוח צריך למלא');  
+          // this.router.navigate(['table']);
+          alert("פרטיך נרשמו בהצלחה ")
+          //  console.error('לקוח צריך למלא');  
          }
          else
          {
           this.userService.save(this.clerk).subscribe(
             (res:string)=>
             console.log("פקיד נרשם"))
+            this.router.navigate(['table']);
           //  localStorage.setItem("currentUser",res);
           //  console.log(res);
           //  this.router.navigate(['main']);
@@ -78,11 +82,13 @@ export class ClerkDetailsComponent   {
       }
       else{
         // console.log("error");//קוד עדכון
-        this.userService.Update(this.clerk).subscribe(
-          (res:string)=>
-          console.log("פקיד עודכן")
+        this.userService.changeStatus(this.clerk).subscribe(
+          (res:string)=>{
+          console.log("פקיד עודכן");
+          this.router.navigate(['table']);}
         );
       }
+      //this.router.navigate(['table']);
   } 
   changeStatus(){
 this.userService.changeStatus(this.clerk).subscribe(
@@ -96,8 +102,10 @@ console.log(this.clerk.isConfirm);
   deleteClerk()
 {
   this.userService.delete(this.clerk).subscribe(
-    (res:string)=>
-    console.log("פקיד נמחק")
+    (res:string)=>{
+    console.log("פקיד נמחק");
+    this.router.navigate(["table"]);
+    }
   );
 
 }  
@@ -105,6 +113,7 @@ update(){
   this.userService.Update(this.clerk).subscribe(
     (res:ClerkDetails)=>{
       this.clerk=res;
+      this.router.navigate(["table"]);
     }
   )
 }

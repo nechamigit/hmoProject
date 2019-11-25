@@ -1,4 +1,4 @@
-<form> 
+<form *ngIf="clerk"> 
   <div class="editClerk">
     <!-- <form *ngIf="clerk" (ngSubmit)="save(clerk)"> -->
   <h1>פרטי פקיד</h1>
@@ -41,7 +41,7 @@
 
   <div class="row">
     <mat-form-field class="example">
-      <input type="text" matInput placeholder="כתובת" name="address" required [(ngModel)]="clerk.address">
+      <input type="text" matInput placeholder="כתובת" name="adress" required [(ngModel)]="clerk.adress">
     </mat-form-field>
   </div>
  
@@ -56,13 +56,13 @@
     </mat-form-field>
   </div>
   <div class="confirmClerk">
-  <button (click)="changeStatus(clerk)">אישור</button>
+  <button (click)="save(clerk)">אישור</button>
 </div>
   <!-- <button type="submit">save</button> -->
   <div class="example-button-row">
     <button mat-fab color="primary" (click)= "update(clerk)">update</button>
     <button mat-fab color="primary" (click)="deleteClerk()">-</button>
-    <button mat-fab color="primary" (click)="changeStatus()">+</button>
+    <!-- <button mat-fab color="primary" (click)="changeStatus()">+</button> -->
   </div>
 </div>
 </form>

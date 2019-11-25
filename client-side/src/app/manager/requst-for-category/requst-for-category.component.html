@@ -1,15 +1,14 @@
-<form *ngIf="request">
+<div *ngIf="request">
   <div class="requestForm">
-  <h1>בקשת הפקיד</h1>
-  <div class="row">
+  <h1>בקשת הפקיד {{request.userName}}</h1>
+  <!-- <div class="row">
     <mat-form-field class="example">
       <input type="text" matInput placeholder="שם פקיד" name="userName" required [(ngModel)]="request.user.userName">
     </mat-form-field>
-  </div> 
+  </div>  -->
   <div class="row">
-    <mat-form-field class="example">
-      <input type="text" matInput placeholder="קטגוריה" name="categoryName" required [(ngModel)]="request.categoryName">
-    </mat-form-field>
+    <p>בקשת הפקיד {{request.categoryName}}</p>
+
   </div>
   <div class="row">
     <mat-form-field class="example">
@@ -26,7 +25,7 @@
       <input type="text" matInput placeholder="סוג בקשה" name="requestKind" required [(ngModel)]="request.requestKind">
     </mat-form-field>
   </div>
-  <button (click)="confirm()" >אישור</button>
+  <button id="butt" (click)="confirm()" >אישור</button>
   </div>
   <!-- <button type="submit">save</button>
   <div class="example-button-row">
@@ -34,4 +33,4 @@
     <button mat-fab color="primary">-</button>
     <button mat-fab color="primary">+</button> 
   </div>-->
-</form>
+</div>

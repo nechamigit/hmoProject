@@ -1,0 +1,48 @@
+<form> 
+    <div class="editPrice">
+ 
+    <h1>ההשואה </h1>
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="מחיר מוצר" name="priceText" required [(ngModel)]="price.priceText">
+      </mat-form-field>
+    </div> 
+
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="price.priceText">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="הנחה" name="discount" required [(ngModel)]="price.discount">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="גיל" name="rangeAge" required [(ngModel)]="price.rangeAge">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="price.insurance">
+      </mat-form-field>
+    </div>
+
+  
+  
+
+    <!-- <div class="confirmClerk">
+    <button (click)="save(clerk)">אישור</button>
+  </div> -->
+    <!-- <button type="submit">save</button> -->
+    <!-- <div class="example-button-row"> -->
+      <!-- <button mat-fab color="primary" (click)= "update(clerk)">update</button>
+      <button mat-fab color="primary" (click)="deleteClerk()">-</button> -->
+      <!-- <button mat-fab color="primary" (click)="changeStatus()">+</button> -->
+    <!-- </div> -->
+  </div>
+  </form>
+  

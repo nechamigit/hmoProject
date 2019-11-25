@@ -21,7 +21,7 @@ export class UserService {
   }
   delete(clerk:ClerkDetails){
     // return this.http.post(this.baseRoute+"Account?userName="+userName+"&password="+password,null);
-      return this.http.post(environment.baseRoute+"clerk/delete",clerk);
+      return this.http.post(environment.baseRoute+"clerk/Delete",clerk);
   }
   getAllHmos(){
       return this.http.get(environment.baseRoute+"hmo/GetAllhmo");
