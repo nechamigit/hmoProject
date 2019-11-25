@@ -17,10 +17,27 @@ namespace BLL.CRUD
                 Select(u => Casting.PRICE_Casting.CastToDTO(u)).FirstOrDefault();
         }
         //read
-        public static List<PRICE> Read()
+        public static List<PRICE_DTO> Read()
         {
-            return ctx.PRICEs.ToList();
-        }
+			//return 
+			List<PRICE_DTO> list = new List<PRICE_DTO>();
+			var priceList = ctx.PRICEs.ToList();//.Select(p=> Casting.PRICE_Casting.CastToDTO(p)).ToList();
+			foreach (var price in priceList)
+			{
+				PRICE_DTO item = new PRICE_DTO()
+				{
+					discount = price.discount,
+					hmoName =price.INSURANCE_TBL.HMO_TBL.hmoName,
+					insuranceName = price.INSURANCE_TBL.insuranceName,
+					priceText = price.priceText,
+					productName = price.PRODUCTS_TBL.name,
+					ageRange = price.AGE_TBL.begins + "-" + price.AGE_TBL.ends,
+
+				};
+				list.Add(item);
+			}
+			return list;
+		}
         //create
         public static void create(PRICE_DTO price)
         {
