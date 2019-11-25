@@ -24,7 +24,7 @@ namespace DAL
         public string userName { get; set; }
         public string tz { get; set; }
         public string password { get; set; }
-        public Nullable<int> hmoId { get; set; }
+        public int hmoId { get; set; }
         public bool isAdmin { get; set; }
         public string adress { get; set; }
         public string mail { get; set; }
