@@ -20,7 +20,11 @@ namespace BLL.Casting
                 productId=a.productId,
                 ageId = a.ageId,
                 discount = a.discount,
-                insuranceId = a.insuranceId
+                insuranceId = a.insuranceId,
+				productName = a.PRODUCTS_TBL.name,
+				ageRange = a.AGE_TBL.begins+ "-"+ a.AGE_TBL.ends,
+				hmoName = a.INSURANCE_TBL.HMO_TBL.hmoName,
+				insuranceName = a.INSURANCE_TBL.insuranceName
             };
 
         }

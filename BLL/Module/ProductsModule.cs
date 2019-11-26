@@ -36,6 +36,7 @@ namespace BLL.Module
         //        return null;
         //    }
         //}
+//פונקציה המביאה פריטים לפי חיפוש מורחב
 
         public static List<ProductPrices> getProductByKriterion(int productId)
         {

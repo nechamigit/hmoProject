@@ -43,7 +43,8 @@ namespace BLL.CRUD
 				{
 					name = product.name,
 					description = product.description,
-					categoryId = product.categoryId
+					categoryId = product.categoryId,
+					imag=product.imag
 				};
 				ctx.PRODUCTS_TBL.Add(newProduct);
 				ctx.SaveChanges();
