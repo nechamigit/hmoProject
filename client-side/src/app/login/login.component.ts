@@ -16,24 +16,39 @@ export class LoginComponent implements OnInit {
   constructor(private loginS: LoginService, private router: Router) { }
 
   ngOnInit() {
-    this.login();
+    //this.login();
   }
 
-  login() {
+  login()
+   {
     this.loginS.logIn(this.user).subscribe(
-      (res:any) => {
-        if (res == null) {
+      (res:any) =>
+      {
+        if (res == null)
+       {
+
+         
           console.error('שם משתמש וסיסמא ללקוח ומנהל בלבד');
+          alert('שם משתמש וסיסמא ללקוח ומנהל בלבד')
         }
-        else {
+        else if(res=='clerk')
+        {
+          localStorage.setItem("currentUser", res);
+          console.log(res);
+          this.router.navigate(['categories']);
+        }
+        else{
           localStorage.setItem("currentUser", res);
           console.log(res);
           this.router.navigate(['manager']);
         }
       },
+
       (err) => {
         console.error('שגיאה אירעה:' + err);
+       
       }
     )
   }
+
 }

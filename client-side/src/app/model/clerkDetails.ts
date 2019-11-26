@@ -7,7 +7,7 @@ export class ClerkDetails {
         this.hmoId;
         this.mail="";
         this.telephone="";
-        this.address="";
+        this.adress="";
         this.tz="";
         this.requestForm="";
         this.isConfirm=false;
@@ -20,7 +20,7 @@ export class ClerkDetails {
         tz:string;
         password:string;
         hmoId:number;
-        address:string;
+        adress:string;
         mail:string;
         requestForm:string;
         telephone:string;

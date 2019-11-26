@@ -47,6 +47,7 @@
     <Compile Include="HMO_DTO.cs" />
     <Compile Include="INSURANCE_DTO.cs" />
     <Compile Include="PRICE_DTO.cs" />
+    <Compile Include="ProductPrices_DTO.cs" />
     <Compile Include="PRODUCTS_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REQUEST_DTO.cs" />

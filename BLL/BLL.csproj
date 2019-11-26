@@ -48,15 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Casting\AGE_Casting.cs" />
-    <Compile Include="Casting\CATEGORIES_Casting.cs" />
-    <Compile Include="Casting\HMO_Casting.cs" />
-    <Compile Include="Casting\INSURANSE_Casting.cs" />
-    <Compile Include="Casting\PRICE_Casting.cs" />
-    <Compile Include="Casting\PRODUCTS_Casting.cs" />
-    <Compile Include="Casting\REQUEST_Casting.cs" />
-    <Compile Include="Casting\SATISFICATION_Casting.cs" />
-    <Compile Include="Casting\USERS_Casting.cs" />
+    <Compile Include="CRUD\Casting\AGE_Casting.cs" />
+    <Compile Include="CRUD\Casting\CATEGORIES_Casting.cs" />
+    <Compile Include="CRUD\Casting\HMO_Casting.cs" />
+    <Compile Include="CRUD\Casting\INSURANSE_Casting.cs" />
+    <Compile Include="CRUD\Casting\PRICE_Casting.cs" />
+    <Compile Include="CRUD\Casting\PRODUCTS_Casting.cs" />
+    <Compile Include="CRUD\Casting\REQUEST_Casting.cs" />
+    <Compile Include="CRUD\Casting\SATISFICATION_Casting.cs" />
+    <Compile Include="CRUD\Casting\USERS_Casting.cs" />
     <Compile Include="CRUD\AgeCRUD.cs" />
     <Compile Include="CRUD\CategoryCRUD.cs" />
     <Compile Include="CRUD\HmoCRUD.cs" />
@@ -91,7 +91,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

@@ -7,7 +7,8 @@ export class Requests{
     requestStatus:number;
     requestKind:number;
     categoryId:number;
-    requestId:number
+    requestId:number;
+    userName:string
 
 constructor(user:Users,categoryName,parentCategory,requestStatus,requestKind,categoryId,requestId){
 this.categoryId=categoryId;

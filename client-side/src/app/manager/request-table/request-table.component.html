@@ -20,19 +20,20 @@
 
   <!-- status Column -->
   <ng-container matColumnDef="requestStatus">
-    <th mat-header-cell *matHeaderCellDef>requestStatus</th>
+    <th mat-header-cell *matHeaderCellDef>סטטוס בקשה</th>
     <td mat-cell *matCellDef="let element"> {{element.requestStatus==0?'לא מאושר':'מאושר'}} </td>
   </ng-container>
  
   <!-- requestkind Column -->
   <ng-container matColumnDef="requestKind">
-    <th mat-header-cell *matHeaderCellDef>requestKind</th>
-    <td mat-cell *matCellDef="let element"> {{element.requestKind}} </td>
+    <th mat-header-cell *matHeaderCellDef>סוג בקשה</th>
+    <td mat-cell *matCellDef="let element"> {{element.requestKind==1?'הוספה':(element.requestKind==2?'מחיקה':'עדכון')}}</td>
   </ng-container>  
+  <!-- <td mat-cell *matCellDef="let element"> {{element.requestKind==1:'מחיקה':2,'עדכון' :3, :'הוספה'}</td> -->
 
   <!-- categoryName Column -->
    <ng-container matColumnDef="categoryName">
-    <th mat-header-cell *matHeaderCellDef>categoryName</th>
+    <th mat-header-cell *matHeaderCellDef>קטגוריה</th>
     <td mat-cell *matCellDef="let element"> {{element.categoryName}} </td>
   </ng-container>
      <!-- isConfirm Column -->
@@ -47,6 +48,7 @@
     <th mat-header-cell *matHeaderCellDef> telephone </th>
     <td mat-cell *matCellDef="let element"> {{element.telephone}} </td>
   </ng-container>  -->
+  
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="editRequest(row)">

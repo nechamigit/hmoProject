@@ -8,7 +8,11 @@ namespace DTO
 {
      public class PRICE_DTO
     {
-        public int priceId { get; set; }
+		public string productName { get; set; }
+		public string hmoName { get; set; }
+		public string insuranceName { get; set; }
+		public string ageRange { get; set; }
+		public int priceId { get; set; }
         public Nullable<double> priceText { get; set; }
         public int productId { get; set; }
         public int insuranceId { get; set; }

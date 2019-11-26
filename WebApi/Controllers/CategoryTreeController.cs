@@ -15,8 +15,8 @@ namespace WebApi.Controllers
     public class CategoryTreeController : ApiController
     {
         [HttpGet]
-        //[Route("get")]
-        public List<CategoryTree> GetCategoryTree()
+		[Route("get")]
+		public List<CategoryTree> GetCategoryTree()
         {
             using (HMO_PROGECTEntities db = new HMO_PROGECTEntities())
             {

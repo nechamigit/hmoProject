@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Request } from 'selenium-webdriver/http';
 import {MatInputModule} from '@angular/material/input';
+import { RequestService } from './request.service';
 
 @Component({
   selector: 'app-requst-for-category',
@@ -17,7 +18,7 @@ export class RequstForCategoryComponent implements OnInit {
   request: Requests;
   user: Users;
    
-  constructor(private service:ManagerService,private router:Router,private route:ActivatedRoute) { }
+  constructor(private requestService:RequestService ,private service:ManagerService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit() {
     var id=+this.route.snapshot.paramMap.get('id');
@@ -28,4 +29,12 @@ export class RequstForCategoryComponent implements OnInit {
         });
       }
     }
+    confirm(){
+      this.requestService.changeStatus(this.request).subscribe(
+        (res:string)=>{
+        // console.log( ");
+        this.router.navigate(['categoryTable']);}
+      );
+    }
+
 }

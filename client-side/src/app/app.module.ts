@@ -20,7 +20,6 @@ import { CategoryTreeComponent } from './trees/category-tree/category-tree.compo
 import { TreeModule } from 'angular-tree-component';
 import { CategoriesListComponent } from './category/categories-list/categories-list.component';
 import { CategoryDetailsComponent } from './category/category-details/category-details.component';
-import { UsersListComponent } from './user/users-list/users-list.component';
 import { ManagrOptionsComponent } from './manager/managr-options/managr-options.component';
 import { tableComponent } from './manager/table/table.component';
 import {MatTableModule} from '@angular/material/table';
@@ -34,7 +33,11 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
 import {MatButtonModule} from '@angular/material/button';
 import {RequestTableComponent} from './manager/request-table/request-table.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-category.component'; 
+import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-category.component';
+import { AboutComponent } from './about/about.component';
+import { HierarchyComponent } from './hierarchy/hierarchy.component';
+import { PriceComponent } from './price/price.component';
+import { PriceDetailsComponent } from './price-details/price-details.component';
 // import { ProductDetailsComponent } from './product/product-details/product-details.component';
 @NgModule({
   declarations: [
@@ -50,7 +53,6 @@ import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-ca
     CategoryTreeComponent,
     CategoriesListComponent,
     CategoryDetailsComponent,
-    UsersListComponent,
     ManagrOptionsComponent,
     tableComponent,
     ProductCardComponent,
@@ -58,7 +60,11 @@ import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-ca
     ViewProductComponent,
     RequestTableComponent,
     ProductCardComponent,
-    ViewSubCategoryComponent
+    ViewSubCategoryComponent,
+    AboutComponent,
+    HierarchyComponent,
+    PriceComponent,
+    PriceDetailsComponent,
     // ReactiveFormsModule
     
   ],

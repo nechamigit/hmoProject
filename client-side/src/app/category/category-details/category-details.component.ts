@@ -15,7 +15,7 @@ export class CategoryDetailsComponent implements OnInit {
 
   selectedCategory:CategoryDetails;
   selectedProduct:productDetails;
-product:Products;
+  product:Products;
 ngOnInit(){}
   constructor(private categoryService:CategoryService,private router:Router,private route:ActivatedRoute) { }
 

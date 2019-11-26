@@ -36,8 +36,20 @@ namespace BLL.CRUD
         //create
         public static void Create(PRODUCTS_DTO product)
         {
-            ctx.PRODUCTS_TBL.Add(new PRODUCTS_TBL { name = product.name, description = product.description, categoryId = product.categoryId });
-            ctx.SaveChanges();
+			using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+			{
+				// ctx.PRODUCTS_TBL.Add(new PRODUCTS_TBL { name = product.name, description = product.description, categoryId = product.categoryId });
+				PRODUCTS_TBL newProduct = new PRODUCTS_TBL()
+				{
+					name = product.name,
+					description = product.description,
+					categoryId = product.categoryId
+				};
+				ctx.PRODUCTS_TBL.Add(newProduct);
+				ctx.SaveChanges();
+
+			}
+
         }
         //delete
         public static void Delete(PRODUCTS_DTO product)

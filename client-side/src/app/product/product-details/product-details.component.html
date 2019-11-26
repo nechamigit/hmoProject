@@ -1,6 +1,6 @@
 
-<form>
-    <h1>product</h1>
+<form dir="rtl">
+    <h1>"הוספת מוצר"</h1>
     <div class="row">
       <mat-form-field class="example">
         <input type="text" matInput placeholder="שם" name="name" required [(ngModel)]="product.name">
@@ -13,21 +13,42 @@
     </div>
     <div class="row">
       <mat-form-field class="example">
+        <input type="text" matInput placeholder="הוספת תמונה" name="description" required [(ngModel)]="product.description">
+      </mat-form-field>
+    </div>
+
+    <!-- <div class="row">
+      <mat-form-field class="example">
         <input type="text" matInput placeholder="מחיר" name="price" required [(ngModel)]="product.price">
       </mat-form-field>
-    </div>
-    <div class="row">
+    </div> -->
+    <!-- <div class="row">
       <mat-form-field class="example">
+          <mat-label>ביטוח</mat-label>
         <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="product.insurance">
       </mat-form-field>
-    </div>
-    <div class="row">
+    </div> -->
+    <!-- <div class="row">
+    <mat-form-field>
+        <mat-label>ביטוח</mat-label>
+         <mat-select [(ngModel)]="clerk.insurance" [ngModelOptions]="{standalone: true}">
+          <mat-option *ngFor="let insurance of insurance" [value]="clerk.insurance">
+            {{insurance.hmoName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+
+
+
+    <!-- <div class="row">
       <mat-form-field class="example">
+        
         <input type="text" matInput placeholder="קטגוריית אב" name="parentCategory" required [(ngModel)]="product.parentCategory">
         {{product.categoryId}}
       </mat-form-field>
-    </div>
-    <div class="row">
+    </div> -->
+    <!-- <div class="row">
       <mat-form-field>
         <mat-label>קופת חולים</mat-label>
          <mat-select [(ngModel)]="product.hmo" [ngModelOptions]="{standalone: true}">
@@ -36,7 +57,7 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-    </div>
+    </div> -->
   <button (click)="save()">save</button>
   <button (click)="deleteProduct()">למחיקת מוצר</button>
   </form>

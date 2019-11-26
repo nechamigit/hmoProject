@@ -71,5 +71,20 @@ namespace WebApi.Controllers
                 return InternalServerError();
             }
         }
-    }
+		[HttpPost]
+		[Route("confirm")]
+		public IHttpActionResult confirm(REQUEST_DTO request)
+		{
+			try
+			{
+				RequestCRUD.UpdateConfirm(request);
+				return Ok();
+			}
+			catch (Exception e)
+			{
+
+				return InternalServerError(e);
+			}
+		}
+	}
 }

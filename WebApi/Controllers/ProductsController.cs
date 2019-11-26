@@ -53,9 +53,9 @@ namespace WebApi.Controllers
                 ProductsCRUD.Create(product);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
 
         }

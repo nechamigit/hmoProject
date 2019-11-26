@@ -12,7 +12,8 @@ import { Age } from 'src/app/model/age';
 import { productDetails } from 'src/app/model/product-details';
 import { ClerkDetails } from 'src/app/model/clerkDetails';
 import { Hmo } from 'src/app/model/Hmo';
-
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-categories-list',
   templateUrl: './categories-list.component.html',
@@ -20,47 +21,84 @@ import { Hmo } from 'src/app/model/Hmo';
 })
 export class CategoriesListComponent implements OnInit {
   myControl = new FormControl();
-  constructor(private catServ: CategoryService) { }
+  constructor(private catServ: CategoryService,private route:Router) { }
   @ViewChild('categoryDetails', { static: false }) child: CategoryDetailsComponent;
   searchVal: string = "tree";
-  option;
-  filteredOptions;
+  // Field:boolean=true;
+  // options;
+  // filteredOptions;
+  options: any;
+  filteredOptions: Observable<string[]>;
   selectedCategory;
   product: productDetails = new productDetails;
   user: Users;
   hmos: Array<Hmo>;
   age: Age;
   clerk: ClerkDetails=new ClerkDetails;
+  // ngOnInit() {
+  //   this.catServ.getAllCategories().subscribe((res: any) => {
+  //     this.option = res;
+  //     this.filteredOptions = this.myControl.valueChanges
+  //       .pipe(
+  //         startWith(''),
+  //         map(value => this._filter(value))
+  //       );
+  //   }),
+  //     this.catServ.getAllHmos().subscribe((res: Array<Hmo>) => {
+  //       this.hmos = res;
+  //     })
+  // }
   ngOnInit() {
     this.catServ.getAllCategories().subscribe((res: any) => {
-      this.option = res;
+      this.options = res;
       this.filteredOptions = this.myControl.valueChanges
         .pipe(
           startWith(''),
           map(value => this._filter(value))
         );
-    }),
-      this.catServ.getAllHmos().subscribe((res: Array<Hmo>) => {
-        this.hmos = res;
-      })
+    }) ,
+    this.catServ.getAllHmos().subscribe((res: Array<Hmo>) => {
+      this.hmos = res;
+    })
   }
+  // HideFildes(){
+  //   searchVal:"tree";
+  //   this.Field=true;
+  // }
+  // private _filter(value: string): string[] {
+  //   const filterValue = value;
 
-
-  private _filter(value: string): string[] {
-    const filterValue = value;
-
-    return this.option.filter(option => option.categoryName.includes(filterValue));
-  }
-  onSelectedOption(event: MatAutocompleteSelectedEvent) {
-    var selectedCategory = event.option.value;
-    // this.router.navigate(['view',selectedCategory.categoryId]);
-  }
+  //   return this.option.filter(option => option.categoryName.includes(filterValue));
+  // }
+  // onSelectedOption(event: MatAutocompleteSelectedEvent) {
+  //   var selectedCategory = event.option.value;
+  //   // this.router.navigate(['view',selectedCategory.categoryId]);
+  // }
 
   logNode(node) {
     this.child.selectedCategoryWasChanged(node.id);
   }
+  // displayFn(category?: any): string | undefined {
+  //   return category ? category.categoryName : undefined;
+  // }
+  private _filter(value: string): string[] {
+    const filterValue = value;
+
+    return this.options.filter(option => option.categoryName.includes(filterValue));
+  }
+
   displayFn(category?: any): string | undefined {
     return category ? category.categoryName : undefined;
+  }
+  // compareS(){
+  //   this.catServ.(this.product.productId).subscribe(
+  //     (res) => {
+  //       this.viewSubCategory.dataSource = res;
+  //       this.showTable=true;
+  //     })
+  // }
+  compareS(){
+    this.route.navigate(['price']);
   }
 
 }

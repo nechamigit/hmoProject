@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Products } from 'src/app/model/products';
 import { Price } from 'src/app/model/price';
+import { MatTableDataSource } from '@angular/material';
+import { DataCompare } from 'src/app/model/dataCompare';
 
 @Component({
   selector: 'app-view-product',
@@ -14,7 +16,8 @@ export class ViewProductComponent implements OnInit {
   constructor(private route: ActivatedRoute, private productService: ProductService, private router: Router) { }
   product: Products;
   canEdit: boolean = true;
-
+  showTable: boolean = false;
+  @ViewChild ('viewSubCategory',{static:false}) viewSubCategory: any;
   ngOnInit() {
     var id = +this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -31,6 +34,13 @@ export class ViewProductComponent implements OnInit {
     this.productService.save(this.product).subscribe(
       (res: Products) => {
         this.product = res;
+      })
+  }
+  compare(){
+    this.productService.getComperation(this.product.productId).subscribe(
+      (res) => {
+        this.viewSubCategory.dataSource = res;
+        this.showTable=true;
       })
   }
   deleteProduct() {

@@ -11,6 +11,7 @@ using WebApi.Models;
 namespace WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+	[RoutePrefix("Account")]
     public class AccountController : ApiController
     {
         [HttpPost]

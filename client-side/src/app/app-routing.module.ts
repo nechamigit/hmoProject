@@ -18,9 +18,15 @@ import { RequestTableComponent } from './manager/request-table/request-table.com
 import { CategoryTreeComponent } from './trees/category-tree/category-tree.component';
 import { ProductCardComponent } from './category/product-card/product-card.component';
 import { ViewSubCategoryComponent } from './search/view-sub-category/view-sub-category.component';
+import { AboutComponent } from './about/about.component';
+import { HierarchyComponent } from './hierarchy/hierarchy.component';
+import { PriceComponent } from './price/price.component';
+import { PriceDetailsComponent } from './price-details/price-details.component';
 // import {SearchCategoryComponent}from './search-category/search-category.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'hierarchy', component: HierarchyComponent },
   { path: 'manager', component: ManagrOptionsComponent },
   { path: 'search', component: SearchComponent },
   { path: 'clerk', component: ClerkDetailsComponent },
@@ -39,6 +45,10 @@ const routes: Routes = [
   { path: 'categoryTable', component: RequestTableComponent },
   { path: 'categoryDetails', component: CategoryDetails },
   { path: 'tree', component: CategoryTreeComponent },
+ { path: '123', component: ViewProductComponent },
+ { path: 'editPrice/:id', component: PriceDetailsComponent },
+ { path: 'price', component: PriceComponent },
+ 
   { path: '**', component: MainComponent },
 
 ];

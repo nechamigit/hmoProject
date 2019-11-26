@@ -16,7 +16,7 @@ namespace WebApi.Controllers
     public class PriceController : ApiController
     {
         [HttpGet]
-        [Route("Read")]
+        [Route("ReadPrice")]
         public IHttpActionResult ReadPrice()
         {
             try
@@ -26,7 +26,7 @@ namespace WebApi.Controllers
             catch (Exception e)
             {
 
-                return InternalServerError();
+                return InternalServerError(e);
             }
         }
         [HttpGet]
