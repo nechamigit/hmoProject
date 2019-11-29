@@ -216,8 +216,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="downLoadPic\0JSV_138_00000077_f.png" />
-    <Content Include="downLoadPic\K5_K6_f.png" />
+    <Content Include="downLoadPic\1.png" />
+    <Content Include="downLoadPic\2.png" />
+    <Content Include="downLoadPic\3.jpg" />
+    <Content Include="downLoadPic\a-7-1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

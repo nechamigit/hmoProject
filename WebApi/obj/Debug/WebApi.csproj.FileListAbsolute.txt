@@ -334,6 +334,8 @@ Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\Web
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.dll
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.pdb
+C:\git\hmoProject\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
+C:\git\hmoProject\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\WebApi\bin\ApplicationInsights.config
 C:\git\hmoProject\WebApi\bin\WebApi.dll.config
 C:\git\hmoProject\WebApi\bin\WebApi.dll
@@ -441,8 +443,6 @@ C:\git\hmoProject\WebApi\bin\Microsoft.AI.DependencyCollector.xml
 C:\git\hmoProject\WebApi\bin\Microsoft.AI.WindowsServer.xml
 C:\git\hmoProject\WebApi\bin\Microsoft.AI.Web.xml
 C:\git\hmoProject\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 C:\git\hmoProject\WebApi\obj\Debug\WebApi.dll
 C:\git\hmoProject\WebApi\obj\Debug\WebApi.pdb

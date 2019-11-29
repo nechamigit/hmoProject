@@ -21,7 +21,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                return Ok(RequestCRUD.read());
+                return Ok(RequestCRUD.Read());
             }
             catch (Exception e)
             {

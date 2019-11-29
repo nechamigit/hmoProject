@@ -39,10 +39,8 @@ namespace WebApi.Controllers
             }
             catch (Exception e)
             {
-
                 return InternalServerError();
             }
-			
 
 		}
         [HttpPost]
@@ -73,5 +71,19 @@ namespace WebApi.Controllers
                 return InternalServerError(e);
             }
         }
-    }
+		[HttpPost]
+		[Route("UpDate")]
+		public IHttpActionResult Update(PRICE_DTO price)
+		{
+			try
+			{
+				priceCRUD.Update(price);
+				return Ok();
+			}
+			catch (Exception e)
+			{
+				return InternalServerError(e);
+			}
+		}
+	}
 }
