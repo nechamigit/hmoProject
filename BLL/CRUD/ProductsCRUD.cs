@@ -34,7 +34,7 @@ namespace BLL.CRUD
             return ctx.PRODUCTS_TBL.ToList();
         }
         //create
-        public static void Create(PRODUCTS_DTO product)
+        public static int Create(PRODUCTS_DTO product)
         {
 			using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
 			{
@@ -48,7 +48,8 @@ namespace BLL.CRUD
 				};
 				ctx.PRODUCTS_TBL.Add(newProduct);
 				ctx.SaveChanges();
-
+				var lastProduct = ctx.PRODUCTS_TBL.LastOrDefault();
+				return lastProduct.productId;
 			}
 
         }

@@ -49,6 +49,8 @@ Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\DTO.pd
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.xml
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\bin\Debug\EntityFramework.SqlServer.xml
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\git\hmoProject\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\git\hmoProject\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\BLL\bin\Debug\BLL.dll.config
 C:\git\hmoProject\BLL\bin\Debug\BLL.dll
 C:\git\hmoProject\BLL\bin\Debug\BLL.pdb
@@ -61,8 +63,6 @@ C:\git\hmoProject\BLL\bin\Debug\DAL.dll.config
 C:\git\hmoProject\BLL\bin\Debug\DTO.pdb
 C:\git\hmoProject\BLL\bin\Debug\EntityFramework.xml
 C:\git\hmoProject\BLL\bin\Debug\EntityFramework.SqlServer.xml
-C:\git\hmoProject\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\git\hmoProject\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\git\hmoProject\BLL\obj\Debug\BLL.dll
 C:\git\hmoProject\BLL\obj\Debug\BLL.pdb

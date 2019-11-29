@@ -37,6 +37,15 @@ namespace BLL.Module
         //    }
         //}
 //פונקציה המביאה פריטים לפי חיפוש מורחב
+  //      public static List<ProductPrices> getComplexsearch(int age,string inputSearch)
+		//{
+		//	using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+		//	{
+		//		List<pro>
+		//	}
+		//	return null;
+
+		//}
 
         public static List<ProductPrices> getProductByKriterion(int productId)
         {

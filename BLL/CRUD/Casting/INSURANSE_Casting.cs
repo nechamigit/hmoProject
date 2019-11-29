@@ -21,7 +21,6 @@ namespace BLL.Casting
                 InsurancePrice= a.InsurancePrice
               
             };
-
         }
         public static INSURANCE_TBL CastToTBL(INSURANCE_DTO a)
         {
