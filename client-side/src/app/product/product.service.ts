@@ -15,7 +15,6 @@ categories;
   getProductById(id:number){
     return this.http.get(environment.baseRoute+"products/readById/"+id);
   }
-
   getComperation(id:number){
     return this.http.get(environment.baseRoute+"Category/GetComperation/"+id);
   }
@@ -35,4 +34,9 @@ categories;
   confirm(requestForCAtegory){
     return this.http.post(environment.baseRoute+"request/changeConfirm",requestForCAtegory)
   }
+  uploadPhotos(file,id){
+    const formData = new FormData();
+    formData.append('image', file);
+     return this.http.post(environment.baseRoute+"product/upLowadPhotos?id="+id,formData); 
+    }
 }

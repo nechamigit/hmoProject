@@ -23,28 +23,34 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
-        <h2 class="text-center">Login</h2>
+        <h2 class="text-center">הרשמה</h2>
         <form class="login-form" #form="ngForm">
           <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-            <input type="text" class="form-control" placeholder="הכנס שם" name="userName" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
+            <label id="name" for="exampleInputEmail1" class="text-uppercase">שם משתמש</label>
+            <input  type="text" class="form-control" placeholder="הכנס שם" name="userName" [(ngModel)]="user.userName" [ngModelOptions]="{standalone: true}">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-            <input type="password" class="form-control" name="password" placeholder="הזן קוד משתמש" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+            <label for="exampleInputPassword1" class="text-uppercase">סיסמא</label>
+            <input id="pass" type="password" class="form-control" name="password" placeholder="הזן קוד משתמש" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
           </div>
-          <div class="form-check">
-            <label class="form-check-label">
+          
+            <!-- <label class="form-check-label">
               <input type="checkbox" class="form-check-input">
               <small>Remember Me</small>
-            </label>
-            <input type="button" (click)="login()" value="לכניסה" title="הכנס">
-            <a routerLink="/clerk" routerLinkActive="active">לבקשת הרשמה כפקיד לחץ כאן</a>
+            </label> -->
+            <div class="btn">
+            <button (click)="login()" value="לכניסה" title="הכנס">לכניסה</button>
+          </div>
+            <br/>
+            <div class="form-check">
+            <!-- <a routerLink="/clerk" routerLinkActive="active">לבקשת הרשמה כפקיד לחץ כאן</a> -->
+            
+            <a (click)="openLoginDialog()">‏לבקשת הרשמה כפקיד לחץ כאן</a>
           </div>
         </form>
-        <div class="copy-text">Created with <i class="fa fa-heart"></i> by C&N</div>
+        <div class="copy-text">Created with <i class="fa fa-heart"></i>by C&N</div>
       </div>
-      <div class="col-md-8 banner-sec">
+        <div class="col-md-8 banner-sec">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -84,8 +90,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
-
   </div>
-</section>
+</section> 

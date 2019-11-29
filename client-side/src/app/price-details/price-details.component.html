@@ -1,18 +1,18 @@
-<form> 
+<form *ngIf="price && id"> 
     <div class="editPrice">
  
-    <h1>ההשואה </h1>
+    <h1> ההשואה למוצר {{price.productName}} </h1>
     <div class="row">
       <mat-form-field class="example">
         <input type="text" matInput placeholder="מחיר מוצר" name="priceText" required [(ngModel)]="price.priceText">
       </mat-form-field>
     </div> 
 
-    <div class="row">
+    <!-- <div class="row">
       <mat-form-field class="example">
-        <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="price.priceText">
+        <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="price.productName">
       </mat-form-field>
-    </div>
+    </div> -->
 
     <div class="row">
       <mat-form-field class="example">
@@ -22,16 +22,22 @@
 
     <div class="row">
       <mat-form-field class="example">
-        <input type="text" matInput placeholder="גיל" name="rangeAge" required [(ngModel)]="price.rangeAge">
+        <input type="text" matInput placeholder="גיל" name="rangeAge" required [(ngModel)]="price.ageRange">
       </mat-form-field>
     </div>
-    <div class="row">
+    <b style="font-size: medium;">ביטוח:{{price.insuranceName}}</b>
+ 
+    <!-- <div class="row">
       <mat-form-field class="example">
-        <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="price.insurance">
+        <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="price.insuranceName">
       </mat-form-field>
-    </div>
+    </div> -->
 
-  
+    <div class="example-button-row">
+      <button mat-fab color="primary" (click)= "update(price)">update</button>
+      <button mat-fab color="primary" (click)="deletePrice()">-</button>
+      <!-- <button mat-fab color="primary" (click)="changeStatus()">+</button> -->
+    </div>
   
 
     <!-- <div class="confirmClerk">

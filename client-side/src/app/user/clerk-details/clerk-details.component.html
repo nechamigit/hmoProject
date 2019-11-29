@@ -1,10 +1,10 @@
 <form *ngIf="clerk"> 
   <div class="editClerk">
     <!-- <form *ngIf="clerk" (ngSubmit)="save(clerk)"> -->
-  <h1>פרטי פקיד</h1>
+  <h1>להרשמה כפקיד מלא את פרטיך</h1>
   <div class="row">
     <mat-form-field class="example">
-      <input type="text" matInput placeholder="ת.ז" name="userTz" required [(ngModel)]="clerk.tz">
+      <input type="text" matInput placeholder="ת.ז" name="userTz"  required [(ngModel)]="clerk.tz">
     </mat-form-field>
   </div> 
   <div class="row">
@@ -24,11 +24,11 @@
   </div>
   <div class="row">
     <mat-form-field class="example">
-      <input type="password" matInput placeholder="סיסמא" name="password" required [(ngModel)]="clerk.password">
+      <input type="password" matInput placeholder="סיסמא" name="password" required [(ngModel)]="clerk.password" (keypress)="validatePassword()">
     </mat-form-field>
   </div>
 <div class="row">
-  <mat-form-field>
+  <mat-form-field >
     <mat-label>קופת חולים</mat-label>
      <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
       <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoId">
@@ -37,7 +37,6 @@
     </mat-select>
   </mat-form-field>
 </div>
-
 
   <div class="row">
     <mat-form-field class="example">
@@ -56,7 +55,7 @@
     </mat-form-field>
   </div>
   <div class="confirmClerk">
-  <button (click)="save(clerk)">אישור</button>
+  <button class="btn" (click)="save(clerk)">אישור</button>
 </div>
   <!-- <button type="submit">save</button> -->
   <div class="example-button-row">

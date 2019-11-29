@@ -12,9 +12,10 @@
       </mat-form-field>
     </div>
     <div class="row">
-      <mat-form-field class="example">
-        <input type="text" matInput placeholder="הוספת תמונה" name="description" required [(ngModel)]="product.description">
-      </mat-form-field>
+      <div class="example">
+        <input #imgInput type="file" placeholder="הוספת תמונה" name="img" required (change)="addImage(imgInput)" [(ngModel)]="product.imag">
+        <!-- <button type="button" name="img" class="btnRegister" md-button (click)="addImage($event)">הוסף תמונה</button> -->
+      </div>
     </div>
 
     <!-- <div class="row">

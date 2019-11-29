@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{RouterModule,Routes,Router}from '@angular/router';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
 
  
  @Component({
@@ -13,8 +15,14 @@ export class ManagrOptionsComponent implements OnInit {
 // this.route.navigate(['/clerk-table'])
 //   }
   constructor(private route:Router) { }
-
+  currentManager:string;
   ngOnInit() {
+   this.currentManager = localStorage.getItem("userName");
   }
+showProfile(){
+  (res:any)=>{
 
+
+  }
+ }
 }

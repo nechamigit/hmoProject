@@ -35,6 +35,8 @@ export class CategoriesListComponent implements OnInit {
   hmos: Array<Hmo>;
   age: Age;
   clerk: ClerkDetails=new ClerkDetails;
+  currentClerk:string;
+  currentUserType:string;
   // ngOnInit() {
   //   this.catServ.getAllCategories().subscribe((res: any) => {
   //     this.option = res;
@@ -49,6 +51,8 @@ export class CategoriesListComponent implements OnInit {
   //     })
   // }
   ngOnInit() {
+    this.currentClerk = localStorage.getItem("userName");
+    this.currentUserType = localStorage.getItem("currentUser");
     this.catServ.getAllCategories().subscribe((res: any) => {
       this.options = res;
       this.filteredOptions = this.myControl.valueChanges

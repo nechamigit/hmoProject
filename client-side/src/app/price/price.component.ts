@@ -47,7 +47,7 @@ export class PriceComponent implements OnInit {
     return numSelected === numRows;
   }
   editPrice(price:Price){
-    this.router.navigate(['editPrice',price.priceId]);
+    this.router.navigate(['editPrice',price.PriceId]);
       }
       masterToggle() {
         this.isAllSelected() ?
