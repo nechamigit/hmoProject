@@ -18,7 +18,6 @@ D:\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\git\hmoProject\DTO\bin\Debug\DTO.dll
 C:\git\hmoProject\DTO\bin\Debug\DTO.pdb
-C:\git\hmoProject\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\git\hmoProject\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\DTO\obj\Debug\DTO.dll
 C:\git\hmoProject\DTO\obj\Debug\DTO.pdb
