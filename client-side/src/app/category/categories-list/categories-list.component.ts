@@ -14,6 +14,7 @@ import { ClerkDetails } from 'src/app/model/clerkDetails';
 import { Hmo } from 'src/app/model/Hmo';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/product/product.service';
 @Component({
   selector: 'app-categories-list',
   templateUrl: './categories-list.component.html',
@@ -21,7 +22,7 @@ import { Router } from '@angular/router';
 })
 export class CategoriesListComponent implements OnInit {
   myControl = new FormControl();
-  constructor(private catServ: CategoryService,private route:Router) { }
+  constructor(private catServ: CategoryService,private route:Router, private productService:ProductService ) { }
   @ViewChild('categoryDetails', { static: false }) child: CategoryDetailsComponent;
   searchVal: string = "tree";
   // Field:boolean=true;
@@ -90,7 +91,13 @@ export class CategoriesListComponent implements OnInit {
 
     return this.options.filter(option => option.categoryName.includes(filterValue));
   }
-
+complexSearch(){
+  this.productService.getComplexComperation(this.product.productId, 10).subscribe(
+    (res)=>{
+      
+    }
+  )
+}
   displayFn(category?: any): string | undefined {
     return category ? category.categoryName : undefined;
   }
