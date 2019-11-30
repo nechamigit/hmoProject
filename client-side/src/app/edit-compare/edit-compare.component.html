@@ -10,39 +10,33 @@
           </mat-select>
         </mat-form-field>
       </div> 
-
     <div class="row">
       <mat-form-field class="example">
-        <input type="text" matInput placeholder="ביטוח" name="Insurance" required>
+        <input type="text" matInput placeholder="ביטוח" name="Insurance" required [(ngModel)]="price.Insurance">
       </mat-form-field>
     </div>
 
     <div class="row">
         <mat-form-field class="example">
-          <input type="text" matInput placeholder="מחיר" name="price" required>
+          <input type="text" matInput placeholder="מחיר" name="price" required [(ngModel)]="price.price">
         </mat-form-field>
       </div>
 
       <div class="row">
           <mat-form-field class="example">
-            <input type="text" matInput placeholder="מחיר ביטוח" name="InsurancePrice" required>
+            <input type="text" matInput placeholder="הנחה" name="discount" required [(ngModel)]="price.discount">
           </mat-form-field>
         </div>
         
         <div class="row">
             <mat-form-field class="example">
-              <input type="text" matInput placeholder="מחיר " name="InsurancePrice" required>
+              <input type="text" matInput placeholder="גיל " name="InsurancePrice" required [(ngModel)]="price.ageRange">
             </mat-form-field>
           </div>
-          
-          <div class="row">
-              <mat-form-field class="example">
-                <input type="text" matInput placeholder="מחיר ביטוח" name="InsurancePrice" required>
-              </mat-form-field>
-            </div>
+        
             <div class="row">
                 <mat-form-field class="example">
-                  <input type="text" matInput placeholder="מחיר ביטוח" name="InsurancePrice" required>
+                  <input type="text" matInput placeholder="מחיר ביטוח" name="InsurancePrice" required [(ngModel)]="price.InsurancePrice">
                 </mat-form-field>
               </div>
     <div class="row">
