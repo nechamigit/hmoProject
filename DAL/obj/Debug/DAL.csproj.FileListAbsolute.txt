@@ -41,8 +41,8 @@ C:\git\hmoProject\DAL\bin\Debug\EntityFramework.dll
 C:\git\hmoProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\git\hmoProject\DAL\bin\Debug\EntityFramework.xml
 C:\git\hmoProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\git\hmoProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\git\hmoProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\git\hmoProject\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\git\hmoProject\DAL\obj\Debug\DAL.dll
 C:\git\hmoProject\DAL\obj\Debug\DAL.pdb
+C:\git\hmoProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
