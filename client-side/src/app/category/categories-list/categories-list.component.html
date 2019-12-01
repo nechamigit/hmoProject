@@ -10,42 +10,15 @@
                         <button class="button" (click)="searchVal='tree'">חיפוש קל</button>
                     </div>
                     <div class="complexSearch">
-                        <button  class="active button"(click)="searchVal='search';">חיפוש מורכב</button>
+                        <button class="active button" (click)="searchVal='search';">חיפוש מורכב</button>
                     </div>
-                    <!-- <div class="cards">
-                            <app-product-card></app-product-card>
-                    </div>  -->
-                    <!-- <div class="treee"> -->
-                    <div class="tree" [hidden]="searchVal!='tree'">
+                    <div class="tree" *ngIf="searchVal=='tree'">
                         <app-category-tree (nodeClicked)="logNode($event)"></app-category-tree>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div *ngIf="searchVal=='search'">
-                        <form class="example-form">
-                            <mat-form-field class="example-full-width">
-                                <input type="text" placeholder="קטגוריה" aria-label="Number" matInput [formControl]="myControl"
-                                [matAutocomplete]="auto">
-                                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
-                                (optionSelected)="onSelectedOption($event)">
-                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                                    {{option.categoryName}}
-                                </mat-option>
-                            </mat-autocomplete>
-                    </mat-form-field>F
-                </form>
-                    </div> -->
                     <div class="complex" *ngIf="searchVal!='tree'">
-                        <!-- <div class="search" [hidden]="HideFildes=='tree'"> -->
-                        <!-- <mat-form-field class="example"> -->
-                        <!-- <input type="text" matInput placeholder="מוצר" name="product" required [(ngModel)]="product.name"> -->
-                        <!-- </mat-form-field> -->
-                        <div class="cards">
-                                <app-category-details *ngIf="searchVal=='tree'" #categoryDetails></app-category-details>       
-                                    <!-- <app-product-card *ngFor="let product of ProductsList" [(product)]="product"></app-product-card> -->              
-                        </div>
                         <mat-form-field class="example-full-width">
-                            <input type="text" placeholder="בחר קטגוריה" aria-label="Number" matInput [formControl]="myControl"
-                                [matAutocomplete]="auto" required>
+                            <input type="text" placeholder="בחר קטגוריה" aria-label="Number" matInput
+                                [formControl]="myControl" [matAutocomplete]="auto" required>
                             <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
                                 (optionSelected)="onSelectedOption($event)">
                                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -55,26 +28,11 @@
                         </mat-form-field>
                         <div class="row">
                             <mat-form-field class="example">
-                                <input  type="number" matInput placeholder="גיל" name="age" [(ngModel)]="ageSelected" required>
+                                <input type="number" matInput placeholder="גיל" name="age" [(ngModel)]="ageSelected"
+                                    required>
                             </mat-form-field>
                         </div>
-                        <div *ngIf="selectedCategory">
-                            <app-product-card *ngFor="let product of selectedCategory.ProductsList"  [isComplex]="true" (cardChange)="cardSelected($event)" [(product)]="product"></app-product-card>     
-
-                        </div>
-                        
-                        <!-- <div class="row">
-                        <mat-form-field>
-                            <mat-label>קופת חולים</mat-label>
-                            <mat-select [(ngModel)]="clerk.hmoId" [ngModelOptions]="{standalone: true}">
-                                <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoId">
-                                    {{hmo.hmoName}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div> -->
                         <button (click)="compareS()">חיפוש</button>
-
                     </div>
                 </div>
             </div>
@@ -82,7 +40,8 @@
                 <div class="products-list">
                     <app-category-details *ngIf="searchVal=='tree'" #categoryDetails></app-category-details>
                     <div *ngIf="searchVal=='search'">
-                        <!-- <app-product-card *ngFor="let product of ProductsList" [(product)]="product"></app-product-card> -->
+                        <app-product-card *ngFor="let product of selectedCategory.ProductsList" [isComplex]="true"
+                            (cardChange)="cardSelected($event)" [(product)]="product"></app-product-card>
                     </div>
                 </div>
             </div>

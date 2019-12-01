@@ -135,6 +135,7 @@ update(){
 }
 handleFileInput(files: FileList) {
   this.fileToUpload = files.item(0);
+  
 }
 postFile(fileToUpload: File): Observable<boolean> {
   const endpoint = 'your-destination-url';
