@@ -24,7 +24,7 @@ namespace BLL.Casting
                 tz = a.tz,
 				lastName=a.lastName,
 				firstName=a.firstName,
-				hmoId=a.hmoId,
+				hmoId=(int)a.hmoId,
                 userId=a.userId,
                 isConfirm=a.isConfirm,
                 requestForm =a.requestForm,

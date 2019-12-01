@@ -11,7 +11,7 @@ import { from, pipe } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ClerkDetailsComponent } from './user/clerk-details/clerk-details.component';
 import { MainComponent } from './main/main.component';
-import {MatInputModule,MatSelectModule} from '@angular/material';
+import {MatInputModule,MatSelectModule, MatDialogTitle, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
@@ -38,6 +38,8 @@ import { AboutComponent } from './about/about.component';
 import { HierarchyComponent } from './hierarchy/hierarchy.component';
 import { PriceComponent } from './price/price.component';
 import { PriceDetailsComponent } from './price-details/price-details.component';
+import { DialogService } from './dialog.service';
+import { EditCompareComponent } from './edit-compare/edit-compare.component';
 // import { ProductDetailsComponent } from './product/product-details/product-details.component';
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { PriceDetailsComponent } from './price-details/price-details.component';
     HierarchyComponent,
     PriceComponent,
     PriceDetailsComponent,
+    EditCompareComponent,
     // ReactiveFormsModule
     
   ],
@@ -87,11 +90,16 @@ import { PriceDetailsComponent } from './price-details/price-details.component';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-     
+    MatDialogModule,
+    FormsModule,
     TreeModule.forRoot(),
  
   ],
-  providers: [],
+  providers: [DialogService,
+    { provide: MatDialogTitle, useValue: {} },
+    { provide: MatDialogRef, useValue: {} },
+    { provide: MAT_DIALOG_DATA, useValue: [] }],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { matAutocomplete}

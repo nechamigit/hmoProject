@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 import { HierarchyComponent } from './hierarchy/hierarchy.component';
 import { PriceComponent } from './price/price.component';
 import { PriceDetailsComponent } from './price-details/price-details.component';
+import { EditCompareComponent } from './edit-compare/edit-compare.component';
 // import {SearchCategoryComponent}from './search-category/search-category.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'edit-clerk/:id', component: ClerkDetailsComponent },
   { path: 'edit-request/:id', component: RequstForCategoryComponent },
   { path: 'product/:id', component: ViewProductComponent },
+  { path: 'product', component: ViewProductComponent },
   { path: 'main', component: MainComponent },
   { path: 'addCategory', component: AddCategoryComponent },
   { path: 'addProduct', component: ProductDetailsComponent },
@@ -48,7 +50,9 @@ const routes: Routes = [
  { path: '123', component: ViewProductComponent },
  { path: 'editPrice/:id', component: PriceDetailsComponent },
  { path: 'price', component: PriceComponent },
- 
+ { path: 'price', component: PriceComponent },
+ {path:'add',component:AddCategoryComponent},
+ {path:'editCompare',component:EditCompareComponent},
   { path: '**', component: MainComponent },
 
 ];

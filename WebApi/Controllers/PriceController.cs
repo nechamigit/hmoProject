@@ -39,10 +39,10 @@ namespace WebApi.Controllers
             }
             catch (Exception e)
             {
-
                 return InternalServerError();
             }
-        }
+
+		}
         [HttpPost]
         [Route("Create")]
         public IHttpActionResult Create(PRICE_DTO price)
@@ -66,10 +66,24 @@ namespace WebApi.Controllers
                 priceCRUD.delete(price);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return InternalServerError();
+                return InternalServerError(e);
             }
         }
-    }
+		[HttpPost]
+		[Route("UpDate")]
+		public IHttpActionResult Update(PRICE_DTO price)
+		{
+			try
+			{
+				priceCRUD.Update(price);
+				return Ok();
+			}
+			catch (Exception e)
+			{
+				return InternalServerError(e);
+			}
+		}
+	}
 }

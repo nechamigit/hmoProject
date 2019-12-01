@@ -56,7 +56,6 @@
     <Compile Include="CATEGORIES_TBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="HMO_TBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -89,9 +88,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SATISFICATION_TBL.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="USERS_TBL.cs">

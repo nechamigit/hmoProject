@@ -22,8 +22,8 @@ export class AddCategoryComponent implements OnInit  {
     Validators.required,
     Validators.email,
   ]);
-Category:addCategory=new addCategory();
-categoriesList:Array<addCategory>;
+  Category:addCategory=new addCategory();
+  categoriesList:Array<addCategory>;
   matcher = new MyErrorStateMatcher();
   categoryType: string;
   isAdmin:boolean;

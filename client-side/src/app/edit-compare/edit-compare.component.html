@@ -1,0 +1,50 @@
+<!-- <form dir="rtl">
+    <h1>"הוספת השואה"</h1>
+    <div class="row">
+        <mat-form-field >
+          <mat-label>קופת חולים</mat-label>
+           <mat-select  [ngModelOptions]="{standalone: true}">
+            <mat-option *ngFor="let hmo of hmos" [value]="hmo.hmoId">
+              {{hmo.hmoName}} 
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div> 
+    <div class="row">
+      <mat-form-field class="example">
+        <input type="text" matInput placeholder="ביטוח" name="Insurance" required [(ngModel)]="price.Insurance">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field class="example">
+          <input type="text" matInput placeholder="מחיר" name="price" required [(ngModel)]="price.price">
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+          <mat-form-field class="example">
+            <input type="text" matInput placeholder="הנחה" name="discount" required [(ngModel)]="price.discount">
+          </mat-form-field>
+        </div>
+        
+        <div class="row">
+            <mat-form-field class="example">
+              <input type="text" matInput placeholder="גיל " name="InsurancePrice" required [(ngModel)]="price.ageRange">
+            </mat-form-field>
+          </div>
+        
+            <div class="row">
+                <mat-form-field class="example">
+                  <input type="text" matInput placeholder="מחיר ביטוח" name="InsurancePrice" required [(ngModel)]="price.InsurancePrice">
+                </mat-form-field>
+              </div>
+    <div class="row">
+      <div class="example">
+        <input #imgInput type="file" placeholder="הוספת תמונה" name="img" required (change)="addImage(imgInput)" [(ngModel)]="product.imag">
+        <button type="button" name="img" class="btnRegister" md-button (click)="addImage($event)">הוסף תמונה</button>
+      </div>
+    </div>
+  <button (click)="save()">save</button>
+  <button (click)="deleteProduct()">למחיקת מוצר</button>
+  </form> -->

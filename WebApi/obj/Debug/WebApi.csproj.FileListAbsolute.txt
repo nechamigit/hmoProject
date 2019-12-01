@@ -1,448 +1,112 @@
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\ApplicationInsights.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\WebApi.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.rsp
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.rsp
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Managed.Core.targets
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.AppContext.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Collections.Immutable.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Console.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Compression.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.AccessControl.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Reflection.Metadata.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.AccessControl.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Claims.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Principal.Windows.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.ValueTuple.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.ReaderWriter.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XmlDocument.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.rsp
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\BLL.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.ApplicationInsights.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.Web.Infrastructure.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Cors.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\WebGrease.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\DAL.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\DTO.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\BLL.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\BLL.dll.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\DAL.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\DAL.dll.config
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\DTO.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.xml
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CopyComplete
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\ApplicationInsights.config
-D:\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll.config
-D:\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\WebApi.pdb
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe.config
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.rsp
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe.config
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.rsp
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Managed.Core.targets
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.AppContext.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Collections.Immutable.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Console.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Compression.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Reflection.Metadata.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.AccessControl.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Claims.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Principal.Windows.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.ValueTuple.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XmlDocument.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe.config
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.rsp
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe
-D:\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe.config
-D:\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\BLL.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\DAL.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.ApplicationInsights.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.Web.Infrastructure.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Cors.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\WebGrease.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\DTO.dll
-D:\HMOProgect\C#\HMO\WebApi\bin\BLL.pdb
-D:\HMOProgect\C#\HMO\WebApi\bin\BLL.dll.config
-D:\HMOProgect\C#\HMO\WebApi\bin\DAL.pdb
-D:\HMOProgect\C#\HMO\WebApi\bin\DAL.dll.config
-D:\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.pdb
-D:\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\HMOProgect\C#\HMO\WebApi\bin\DTO.pdb
-D:\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
-D:\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
-D:\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CopyComplete
-D:\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.dll
-D:\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\ApplicationInsights.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\WebApi.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\WebApi.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.exe.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csc.rsp
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.exe.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\csi.rsp
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.Managed.Core.targets
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.AppContext.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Collections.Immutable.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Console.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Compression.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.AccessControl.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.IO.Pipes.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Reflection.Metadata.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.AccessControl.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Claims.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Security.Principal.Windows.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.ValueTuple.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.ReaderWriter.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XmlDocument.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.exe.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\vbc.rsp
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\roslyn\VBCSCompiler.exe.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\BLL.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\DAL.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.ApplicationInsights.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.Web.Infrastructure.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Cors.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\WebGrease.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\DTO.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\BLL.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\BLL.dll.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\DAL.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\DAL.dll.config
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\EntityFramework.SqlServer.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Net.Http.Formatting.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.Cors.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Newtonsoft.Json.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Helpers.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Http.WebHost.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Mvc.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Optimization.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.Razor.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Deployment.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Web.WebPages.Razor.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Antlr3.Runtime.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.DependencyCollector.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.WindowsServer.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.AI.Web.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\bin\DTO.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.csproj.CopyComplete
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\WebApi\obj\Debug\WebApi.pdb
-C:\git\hmoProject\WebApi\bin\ApplicationInsights.config
-C:\git\hmoProject\WebApi\bin\WebApi.dll.config
-C:\git\hmoProject\WebApi\bin\WebApi.dll
-C:\git\hmoProject\WebApi\bin\WebApi.pdb
-C:\git\hmoProject\WebApi\bin\roslyn\csc.exe
-C:\git\hmoProject\WebApi\bin\roslyn\csc.exe.config
-C:\git\hmoProject\WebApi\bin\roslyn\csc.rsp
-C:\git\hmoProject\WebApi\bin\roslyn\csi.exe
-C:\git\hmoProject\WebApi\bin\roslyn\csi.exe.config
-C:\git\hmoProject\WebApi\bin\roslyn\csi.rsp
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.Managed.Core.targets
-C:\git\hmoProject\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\git\hmoProject\WebApi\bin\roslyn\System.AppContext.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Collections.Immutable.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Console.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.IO.Compression.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.IO.FileSystem.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.IO.Pipes.AccessControl.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.IO.Pipes.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Reflection.Metadata.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.AccessControl.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Claims.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Security.Principal.Windows.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.ValueTuple.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Xml.XmlDocument.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Xml.XPath.dll
-C:\git\hmoProject\WebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\git\hmoProject\WebApi\bin\roslyn\vbc.exe
-C:\git\hmoProject\WebApi\bin\roslyn\vbc.exe.config
-C:\git\hmoProject\WebApi\bin\roslyn\vbc.rsp
-C:\git\hmoProject\WebApi\bin\roslyn\VBCSCompiler.exe
-C:\git\hmoProject\WebApi\bin\roslyn\VBCSCompiler.exe.config
-C:\git\hmoProject\WebApi\bin\Antlr3.Runtime.dll
-C:\git\hmoProject\WebApi\bin\BLL.dll
-C:\git\hmoProject\WebApi\bin\DAL.dll
-C:\git\hmoProject\WebApi\bin\DTO.dll
-C:\git\hmoProject\WebApi\bin\EntityFramework.dll
-C:\git\hmoProject\WebApi\bin\EntityFramework.SqlServer.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.DependencyCollector.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.Web.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.WindowsServer.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.ApplicationInsights.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\git\hmoProject\WebApi\bin\Microsoft.Web.Infrastructure.dll
-C:\git\hmoProject\WebApi\bin\Newtonsoft.Json.dll
-C:\git\hmoProject\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
-C:\git\hmoProject\WebApi\bin\System.Net.Http.Formatting.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Cors.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Helpers.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Http.Cors.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Http.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Http.WebHost.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Mvc.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Optimization.dll
-C:\git\hmoProject\WebApi\bin\System.Web.Razor.dll
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.Deployment.dll
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.dll
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.Razor.dll
-C:\git\hmoProject\WebApi\bin\WebGrease.dll
-C:\git\hmoProject\WebApi\bin\BLL.pdb
-C:\git\hmoProject\WebApi\bin\BLL.dll.config
-C:\git\hmoProject\WebApi\bin\DAL.pdb
-C:\git\hmoProject\WebApi\bin\DAL.dll.config
-C:\git\hmoProject\WebApi\bin\DTO.pdb
-C:\git\hmoProject\WebApi\bin\EntityFramework.xml
-C:\git\hmoProject\WebApi\bin\EntityFramework.SqlServer.xml
-C:\git\hmoProject\WebApi\bin\System.Net.Http.Formatting.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Http.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Http.Cors.xml
-C:\git\hmoProject\WebApi\bin\Newtonsoft.Json.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Helpers.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Http.WebHost.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Mvc.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Optimization.xml
-C:\git\hmoProject\WebApi\bin\System.Web.Razor.xml
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.xml
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.Deployment.xml
-C:\git\hmoProject\WebApi\bin\System.Web.WebPages.Razor.xml
-C:\git\hmoProject\WebApi\bin\Antlr3.Runtime.pdb
-C:\git\hmoProject\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
-C:\git\hmoProject\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.DependencyCollector.xml
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.WindowsServer.xml
-C:\git\hmoProject\WebApi\bin\Microsoft.AI.Web.xml
-C:\git\hmoProject\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.csproj.CopyComplete
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.dll
-C:\git\hmoProject\WebApi\obj\Debug\WebApi.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\ApplicationInsights.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\WebApi.dll.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\WebApi.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\WebApi.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csc.exe
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csc.exe.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csc.rsp
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csi.exe
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csi.exe.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\csi.rsp
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.AppContext.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Console.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.IO.Compression.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.IO.Pipes.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Claims.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.ValueTuple.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\vbc.exe
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\vbc.exe.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\vbc.rsp
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Antlr3.Runtime.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\BLL.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\DAL.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\DTO.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\EntityFramework.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.Web.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Newtonsoft.Json.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Cors.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Helpers.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.Cors.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Mvc.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Optimization.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Razor.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\WebGrease.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\BLL.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\BLL.dll.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\DAL.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\DAL.dll.config
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\DTO.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\EntityFramework.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.Cors.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Newtonsoft.Json.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Helpers.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Mvc.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Optimization.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.Razor.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Antlr3.Runtime.pdb
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.AI.Web.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user1\Source\Repos\hmoProject\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
+C:\Users\user1\Source\Repos\hmoProject\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\user1\Source\Repos\hmoProject\WebApi\obj\Debug\WebApi.csproj.CopyComplete
+C:\Users\user1\Source\Repos\hmoProject\WebApi\obj\Debug\WebApi.dll
+C:\Users\user1\Source\Repos\hmoProject\WebApi\obj\Debug\WebApi.pdb

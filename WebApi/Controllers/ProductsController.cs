@@ -4,11 +4,14 @@ using DAL;
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using static BLL.Module.ProductsModule;
 
 namespace WebApi.Controllers
 {
@@ -44,14 +47,14 @@ namespace WebApi.Controllers
                 return InternalServerError();
             }
         }
-            [HttpPost]
+        [HttpPost]
         [Route("Create")]
         public IHttpActionResult addProduct(PRODUCTS_DTO product)
         {
             try
             {
-                ProductsCRUD.Create(product);
-                return Ok();
+                var id = ProductsCRUD.Create(product);
+                return Ok(id);
             }
             catch (Exception ex)
             {
@@ -73,6 +76,13 @@ namespace WebApi.Controllers
                 return InternalServerError();
             }
 
+        }
+
+        [HttpPost]
+        [Route("getProductByKriterionAndAge")]
+        public List<ProductPrices> getProductByKriterionAndAge(filter filter)
+        {
+            return ProductsModule.getProductByKriterionAndAge(filter.id, filter.age);
         }
         [HttpGet]
         [Route("GetProductInsurance")]
@@ -124,5 +134,38 @@ namespace WebApi.Controllers
             }
 
         }
+        [Route("upLowadPhotos")]
+        [HttpPost]
+        public HttpResponseMessage UploadFile(string id)
+        {
+            var pathToSql = " http://localhost:58516/UploadFiles/ ";
+            var allPath = " ";
+            HttpResponseMessage response = new HttpResponseMessage();
+            var abc = Request.Properties.Values;
+            var httpRequest = HttpContext.Current.Request;
+            foreach (string file in httpRequest.Files)
+            {
+                pathToSql = " http://localhost:58516/UploadFiles/";
+                var postedFile = httpRequest.Files[file];
+                var directoryPath = HttpContext.Current.Server.MapPath(" ~/ UploadFiles / ");
+                Directory.CreateDirectory(directoryPath + id);
+                allPath = directoryPath + id + "/" + postedFile.FileName;
+                postedFile.SaveAs(allPath);
+                pathToSql += id + "/ " + postedFile.FileName;
+                using (HMO_PROGECTEntities db = new HMO_PROGECTEntities())
+                {
+                    var product = db.PRODUCTS_TBL.FirstOrDefault(u => u.productId.ToString() == id);
+                    product.imag = pathToSql;
+                    db.SaveChanges();
+                }
+            }
+            return response;
+        }
+    }
+    public class filter
+    {
+        public int id { get; set; }
+        public int age { get; set; }
     }
 }
+

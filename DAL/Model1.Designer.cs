@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DAL\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\user1\source\repos\hmoProject\DAL\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,6 +1,6 @@
-<form (ngSubmit)="addCategory()">
-  <h1>addCategory</h1>
-  <div class="line">
+<form  class="line" (ngSubmit)="addCategory()">
+  <h1 alt="">להוספת קטגוריה</h1>
+  <div>
        <mat-form-field class="example-full-width">
           <input type="text" matInput placeholder="שם"
            name="Name" required minlength="2" maxlength="30" [(ngModel)]="Category.categoryName">
@@ -25,7 +25,7 @@
   </div> -->
  
 
-  <button type="submit">אישור</button>
+  <button class="btn" type="submit">אישור</button>
   <!-- <button>ביטול</button> -->
   <!-- <button type="submit" (click)="confirmClerk()">שלח</button> -->
 </form> 

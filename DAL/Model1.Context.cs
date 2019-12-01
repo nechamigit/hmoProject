@@ -33,7 +33,6 @@ namespace DAL
         public virtual DbSet<PRODUCTS_TBL> PRODUCTS_TBL { get; set; }
         public virtual DbSet<REQUEST_TBL> REQUEST_TBL { get; set; }
         public virtual DbSet<SATISFICATION_TBL> SATISFICATION_TBL { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<USERS_TBL> USERS_TBL { get; set; }
     }
 }

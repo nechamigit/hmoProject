@@ -4,120 +4,109 @@
     <EntitySetMapping Name="AGE_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.AGE_TBL">
         <MappingFragment StoreEntitySet="AGE_TBL">
-          <ScalarProperty Name="ends" ColumnName="ends" />
-          <ScalarProperty Name="begins" ColumnName="begins" />
           <ScalarProperty Name="ageId" ColumnName="ageId" />
+          <ScalarProperty Name="begins" ColumnName="begins" />
+          <ScalarProperty Name="ends" ColumnName="ends" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CATEGORIES_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.CATEGORIES_TBL">
         <MappingFragment StoreEntitySet="CATEGORIES_TBL">
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="createBy" ColumnName="createBy" />
-          <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
-          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
           <ScalarProperty Name="categoriesId" ColumnName="categoriesId" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
+          <ScalarProperty Name="createBy" ColumnName="createBy" />
+          <ScalarProperty Name="status" ColumnName="status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HMO_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.HMO_TBL">
         <MappingFragment StoreEntitySet="HMO_TBL">
-          <ScalarProperty Name="hmoMail" ColumnName="hmoMail" />
-          <ScalarProperty Name="hmoName" ColumnName="hmoName" />
           <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+          <ScalarProperty Name="hmoName" ColumnName="hmoName" />
+          <ScalarProperty Name="hmoMail" ColumnName="hmoMail" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="INSURANCE_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.INSURANCE_TBL">
         <MappingFragment StoreEntitySet="INSURANCE_TBL">
-          <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="InsurancePrice" ColumnName="InsurancePrice" />
-          <ScalarProperty Name="insuranceName" ColumnName="insuranceName" />
-          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
           <ScalarProperty Name="insuranceId" ColumnName="insuranceId" />
+          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+          <ScalarProperty Name="insuranceName" ColumnName="insuranceName" />
+          <ScalarProperty Name="InsurancePrice" ColumnName="InsurancePrice" />
+          <ScalarProperty Name="description" ColumnName="description" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PRICEs">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.PRICE">
         <MappingFragment StoreEntitySet="PRICE">
-          <ScalarProperty Name="discount" ColumnName="discount" />
-          <ScalarProperty Name="ageId" ColumnName="ageId" />
-          <ScalarProperty Name="insuranceId" ColumnName="insuranceId" />
-          <ScalarProperty Name="productId" ColumnName="productId" />
-          <ScalarProperty Name="priceText" ColumnName="priceText" />
           <ScalarProperty Name="priceId" ColumnName="priceId" />
+          <ScalarProperty Name="priceText" ColumnName="priceText" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="insuranceId" ColumnName="insuranceId" />
+          <ScalarProperty Name="ageId" ColumnName="ageId" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PRODUCTS_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.PRODUCTS_TBL">
         <MappingFragment StoreEntitySet="PRODUCTS_TBL">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="imag" ColumnName="imag" />
-          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
-          <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="imag" ColumnName="imag" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="REQUEST_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.REQUEST_TBL">
         <MappingFragment StoreEntitySet="REQUEST_TBL">
-          <ScalarProperty Name="userId" ColumnName="userId" />
-          <ScalarProperty Name="requestId" ColumnName="requestId" />
-          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
-          <ScalarProperty Name="requestKind" ColumnName="requestKind" />
-          <ScalarProperty Name="requestStatus" ColumnName="requestStatus" />
-          <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
           <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="parentCategory" ColumnName="parentCategory" />
+          <ScalarProperty Name="requestStatus" ColumnName="requestStatus" />
+          <ScalarProperty Name="requestKind" ColumnName="requestKind" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="requestId" ColumnName="requestId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SATISFICATION_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.SATISFICATION_TBL">
         <MappingFragment StoreEntitySet="SATISFICATION_TBL">
-          <ScalarProperty Name="date" ColumnName="date" />
-          <ScalarProperty Name="comment" ColumnName="comment" />
-          <ScalarProperty Name="userId" ColumnName="userId" />
-          <ScalarProperty Name="satisficationOfHmo" ColumnName="satisficationOfHmo" />
-          <ScalarProperty Name="satisficationOfWebsite" ColumnName="satisficationOfWebsite" />
-          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
           <ScalarProperty Name="satisficationId" ColumnName="satisficationId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="HMO_PROGECTModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+          <ScalarProperty Name="satisficationOfWebsite" ColumnName="satisficationOfWebsite" />
+          <ScalarProperty Name="satisficationOfHmo" ColumnName="satisficationOfHmo" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="date" ColumnName="date" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="USERS_TBL">
       <EntityTypeMapping TypeName="HMO_PROGECTModel.USERS_TBL">
         <MappingFragment StoreEntitySet="USERS_TBL">
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="lastName" ColumnName="lastName" />
-          <ScalarProperty Name="firstName" ColumnName="firstName" />
-          <ScalarProperty Name="isConfirm" ColumnName="isConfirm" />
-          <ScalarProperty Name="requestForm" ColumnName="requestForm" />
-          <ScalarProperty Name="telephone" ColumnName="telephone" />
-          <ScalarProperty Name="mail" ColumnName="mail" />
-          <ScalarProperty Name="adress" ColumnName="adress" />
-          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
-          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="tz" ColumnName="tz" />
-          <ScalarProperty Name="userName" ColumnName="userName" />
           <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="tz" ColumnName="tz" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="hmoId" ColumnName="hmoId" />
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="requestForm" ColumnName="requestForm" />
+          <ScalarProperty Name="isConfirm" ColumnName="isConfirm" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,48 +1,85 @@
-<div *ngIf="product">
+<div *ngIf="product" class="container-fluid">
+   <form>
+        <div class="productView row">
+                <div id="mat-img" class="col-sm-5">
+                        <img mat-card-image  [src]="sanitize(product.imag)"  id="picture">
+                </div>
+                <div class="col-sm-5"><div id="description">
+                        <h1 style="color: rgb(217, 48, 96);">{{product.name}}</h1>
+                        <h3>
+                                {{product.description}}
+                        </h3>
 
+                        <!-- <mat-form-field class="example">
+                                <input type="text" matInput placeholder="תאור" name="description"
+                                        [(ngModel)]="product.description">{{product.description}}
+                        </mat-form-field> -->
+                </div>
+                </div>
+                <div class="col-sm-2">
+                        <button *ngIf="isEdit">edit</button>
+                        <!-- <button (click)="save">שמור</button> -->
+                        <!-- <button (click)="compare()">השווה</button>
+                        <button (click)="addCompare()">הוסף השואה</button>. -->
+                </div>
+        </div>
+        </form>
+        <div class="tbl col-sm-12">
+                <!-- <p>{{categories.categoryName}}</p>  -->
+                <table *ngIf="dataSource" mat-table [dataSource]="dataSource" class="mat-elevation-z9">
 
-<form>
+                        <div class="comperationTbl">
 
-<div class="productView">
-<!-- <h1>{{product.name}}</h1> -->
-<div class="row">
-    <mat-form-field class="example">
-      <input type="text" matInput placeholder="תאור" name="description" [(ngModel)]="product.description">{{product.description}}
-    </mat-form-field>
+                                <ng-container matColumnDef="HmoName">
+
+                                        <th mat-header-cell *matHeaderCellDef>קופת חולים </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.HmoName}}</td>
+
+                                </ng-container>
+                                <!-- adress Column -->
+                                <ng-container matColumnDef="InsuranceName">
+                                        <th mat-header-cell *matHeaderCellDef> ביטוח </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.InsuranceName}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="InsurancePrice">
+                                        <th mat-header-cell *matHeaderCellDef> מחיר ביטוח </th>
+                                        <td mat-cell *matCellDef="let element">  {{element.InsurancePrice}} ש"ח</td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="Age">
+                                        <th mat-header-cell *matHeaderCellDef> גיל </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.AgeBegin}}-{{element.AgeEnd}}
+                                        </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="Discount">
+                                        <th mat-header-cell *matHeaderCellDef> הנחה </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.Discount}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="PriceText">
+                                        <th mat-header-cell *matHeaderCellDef> מחיר </th>
+                                        <td mat-cell *matCellDef="let element"> {{element.PriceText}} </td>
+                                </ng-container>
+
+                                <!-- hmo Column -->
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <div [hidden]="currentUser=='user'">
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="editDetails(row)">
+                                </tr>
+                        </div>
+                        </div>
+                </table>
+        </div>
+        <footer class="footer">
+        <div>
+            <a href="https://www.clalit.co.il">כללית</a>
+            <a href="https://leumit.co.il">לאומית</a> 
+            <a href="https://www.maccabi4u.co.il">מכבי</a> 
+            <a href="https://www.meuhedet.co.il">מאוחדת</a> 
+        </div>
+        </footer>
+        <!-- <app-view-sub-category  #viewSubCategory [hidden]="!showTable">
+</app-view-sub-category> -->
 </div>
-  <!-- <div class="row">
-       <mat-form-field class="example">{{product.price}}
-           <input type="text" matInput placeholder="מחיר" name="price" required [(ngModel)]="product.price">  
-         </mat-form-field> 
- </div> -->
-<!-- <div class="row">
-        <mat-form-field class="example">
-        <input type="text" matInput placeholder="גיל"  name="age" required [(ngModel)]="product.age">
-        </mat-form-field>
-</div>
-<div class="row">
-        <mat-form-field class="example">
-        <input type="text" matInput placeholder="ביטוח" name="insurance" required [(ngModel)]="product.insurance" >
-        </mat-form-field>
-</div>
-<div class="row">
-        <mat-form-field class="example">
-        <input type="text" matInput placeholder="קופת חולים" name="hmo" required [(ngModel)]="product.hmo">
-        </mat-form-field>
-</div> -->
-<button *ngIf="isEdit">edit</button>
-<button (click)="save">שמור</button>
-<button (click)="compare()">השווה</button>
-</div>
-</form>
-<app-view-sub-category  #viewSubCategory [hidden]="!showTable">
-
-</app-view-sub-category>
-</div>
-
-
-
- 
- 
- 
- 

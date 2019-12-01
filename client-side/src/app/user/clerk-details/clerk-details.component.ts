@@ -12,6 +12,9 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { strictEqual } from 'assert';
 import { stringify } from '@angular/compiler/src/util';
 import {MatButtonModule} from '@angular/material/button';
+import { MatDialogRef } from '@angular/material';
+import Swal from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-clerk-details',
@@ -25,11 +28,15 @@ export class ClerkDetailsComponent   {
  hmos: Array<Hmo>;
  isAdmin:true;
   userType: string = "";
+  fileToUpload: File = null;
+  httpClient: any;
+  currentUser:string;
   //route:any;
   
-  constructor(private userService: UserService,private router:Router,private route:ActivatedRoute) { }
-   ngOnInit() {
-     
+  constructor(private userService: UserService,private router:Router,private route:ActivatedRoute,
+    public dialogRef: MatDialogRef<ClerkDetails>) { }
+   ngOnInit() { 
+    this.currentUser = localStorage.getItem("currentUser");
     var id=+this.route.snapshot.paramMap.get('id');
     if(id)
     {
@@ -50,10 +57,17 @@ export class ClerkDetailsComponent   {
     
     this.userType = localStorage.getItem("currentUser") ? localStorage.getItem("currentUser") : " ";
   }
+  validatePassword(){
+    if(this.clerk.password.length==5){
+      Swal.fire('סיסמא עד 5 תוים בלבד');
 
+      //return false;
+    }
+  }
   confirmClerk() { }
 
-  save(clerk) {
+  save(clerk)
+   {
     if(this.isNew)
     {
       this.userService.save(this.clerk).subscribe(
@@ -68,8 +82,8 @@ export class ClerkDetailsComponent   {
          {
           this.userService.save(this.clerk).subscribe(
             (res:string)=>
-            console.log("פקיד נרשם"))
-            this.router.navigate(['table']);
+            this.router.navigate(['table']))
+             Swal.fire('פקיד קיים במערכת אין אפשרות להרשם בשנית')
           //  localStorage.setItem("currentUser",res);
           //  console.log(res);
           //  this.router.navigate(['main']);
@@ -79,6 +93,7 @@ export class ClerkDetailsComponent   {
           console.error('שגיאה אירעה:' + err);  
         }
       ) 
+     
       }
       else{
         // console.log("error");//קוד עדכון
@@ -89,6 +104,7 @@ export class ClerkDetailsComponent   {
         );
       }
       //this.router.navigate(['table']);
+      this.dialogRef.close(this.clerk);
   } 
   changeStatus(){
 this.userService.changeStatus(this.clerk).subscribe(
@@ -117,7 +133,27 @@ update(){
     }
   )
 }
-
+handleFileInput(files: FileList) {
+  this.fileToUpload = files.item(0);
+}
+postFile(fileToUpload: File): Observable<boolean> {
+  const endpoint = 'your-destination-url';
+  const formData: FormData = new FormData();
+  formData.append('fileKey', fileToUpload, fileToUpload.name);
+  return this.httpClient
+    .post(endpoint, formData, { headers: 'https://us-central1-tutorial-e6ea7.cloudfunctions.net/fileUpload' })
+    .map(() => { return true; })
+    .catch((e) => this.handleError(e));
+}
+handleError(e){
+  console.log('error'+e)
+}
+// save() {
+//   this.userService.save(this.clerk.value)
+//   .subscribe((response: any) => {
+//   this.dialogRef.close(this.registerForm.value);
+//   });
+//   }
  
   // delete(){
   //   this.userService.delete(this.clerk).subscribe(

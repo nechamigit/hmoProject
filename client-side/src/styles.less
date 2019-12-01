@@ -1,9 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~angular-tree-component/dist/angular-tree-component.css';
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css");
 
+body{
+    direction: rtl;
+}
 .row{
-    margin: 5px !important;
-    padding: 5px !important;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+    /*padding: 5px !important;*/
     
+}
+.row [class *= "col-"]{
+    float: right;
+}
+button:hidden, div:hidden, p:hidden
+{
+    display: none !important;
+}button, .button{
+    background-color: #fff;
+      height: 40px;
+      width: 130px;
+      border: 2px solid #25437e;
+      color: #25437e;
+      border-radius: 50px;
+      display: inline-block;
+      font-weight: bold;
+      font-family: inherit;
+      font-size: 15px;
+      line-height: inherit;
+      direction: rtl;
+      -webkit-transition: all 0.25s;
+      transition: all 0.25s;
+  
+    &:hover, &.active{
+      background-color: #25437e;
+      color: #fff;
+      }
+  
+      &.active{
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, .5);
+      }
+  }
+  
+.tree-children{
+  padding-right: 20px;
+}
+body .mat-form-field{
+  text-align: right;
 }

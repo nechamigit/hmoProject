@@ -32,6 +32,7 @@ namespace BLL.CRUD
 					priceText = price.priceText,
 					productName = price.PRODUCTS_TBL.name,
 					ageRange = price.AGE_TBL.begins + "-" + price.AGE_TBL.ends,
+					priceId = price.priceId
 
 				};
 				list.Add(item);
@@ -47,8 +48,27 @@ namespace BLL.CRUD
         //delete
         public static void delete(PRICE_DTO price)
         {
-            ctx.PRICEs.Remove(ctx.PRICEs.FirstOrDefault(u => u.priceId == price.priceId));
-            ctx.SaveChanges();
+			using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+			{
+				ctx.PRICEs.Remove(ctx.PRICEs.FirstOrDefault(u => u.priceId == price.priceId));
+				ctx.SaveChanges();
+			}
+		
         }
-    }
+		public static void Update(PRICE_DTO price)
+		{
+			using (HMO_PROGECTEntities ctx = new HMO_PROGECTEntities())
+			{
+				var x = ctx.PRICEs.FirstOrDefault(u => u.priceId == price.priceId);
+				x.insuranceId = price.insuranceId;
+				x.INSURANCE_TBL.insuranceName = price.insuranceName;
+				x.priceText = price.priceText;
+				x.discount = price.discount;
+				//x.AGE_TBL.begins = price.ageRange;
+				ctx.SaveChanges();
+			}
+
+		}
+	}
 }
+

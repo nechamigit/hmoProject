@@ -14,6 +14,9 @@ import { ClerkDetails } from 'src/app/model/clerkDetails';
 import { Hmo } from 'src/app/model/Hmo';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/product/product.service';
+import { CategoryDetails } from 'src/app/model/category-details';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-categories-list',
   templateUrl: './categories-list.component.html',
@@ -21,12 +24,13 @@ import { Router } from '@angular/router';
 })
 export class CategoriesListComponent implements OnInit {
   myControl = new FormControl();
-  constructor(private catServ: CategoryService,private route:Router) { }
+  constructor(private catServ: CategoryService,private route:Router, private productService:ProductService ) { }
   @ViewChild('categoryDetails', { static: false }) child: CategoryDetailsComponent;
   searchVal: string = "tree";
   // Field:boolean=true;
   // options;
   // filteredOptions;
+  ageSelected:number = 0;
   options: any;
   filteredOptions: Observable<string[]>;
   selectedCategory;
@@ -35,6 +39,8 @@ export class CategoriesListComponent implements OnInit {
   hmos: Array<Hmo>;
   age: Age;
   clerk: ClerkDetails=new ClerkDetails;
+  currentClerk:string;
+  currentUserType:string;
   // ngOnInit() {
   //   this.catServ.getAllCategories().subscribe((res: any) => {
   //     this.option = res;
@@ -49,6 +55,8 @@ export class CategoriesListComponent implements OnInit {
   //     })
   // }
   ngOnInit() {
+    this.currentClerk = localStorage.getItem("userName");
+    this.currentUserType = localStorage.getItem("currentUser");
     this.catServ.getAllCategories().subscribe((res: any) => {
       this.options = res;
       this.filteredOptions = this.myControl.valueChanges
@@ -70,11 +78,14 @@ export class CategoriesListComponent implements OnInit {
 
   //   return this.option.filter(option => option.categoryName.includes(filterValue));
   // }
-  // onSelectedOption(event: MatAutocompleteSelectedEvent) {
-  //   var selectedCategory = event.option.value;
-  //   // this.router.navigate(['view',selectedCategory.categoryId]);
-  // }
-
+  onSelectedOption(event: MatAutocompleteSelectedEvent) {
+    this.catServ.getCategoryById(event.option.value.categoryId).subscribe((res:CategoryDetails)=>{
+      this.selectedCategory=res;
+    })
+  }
+cardSelected(event){
+  this.product.productId = event;
+}
   logNode(node) {
     this.child.selectedCategoryWasChanged(node.id);
   }
@@ -98,7 +109,21 @@ export class CategoriesListComponent implements OnInit {
   //     })
   // }
   compareS(){
-    this.route.navigate(['price']);
+    if(this.product==null){
+      Swal.fire('בחר במוצר מתוך קגוריה נבחרת');
+      Swal.fire('שם משתמש וסיסמא ללקוח ומנהל בלבד');
+    }
+    this.productService.getComplexComperation(this.product.productId, this.ageSelected).subscribe(
+      (res)=>{
+        localStorage.setItem("comlexList",JSON.stringify(res));
+        localStorage.setItem("selectedProduct",this.product.productId.toString());
+
+        setTimeout(() => {
+          this.route.navigate(['product']);
+        }, 1000);
+       
+      }
+    )
   }
 
 }

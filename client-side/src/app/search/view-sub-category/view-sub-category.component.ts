@@ -10,25 +10,27 @@ import { Categories } from 'src/app/model/categories';
 })
 
 export class ViewSubCategoryComponent implements OnInit {
-selectedCat:number;
+/* selectedCat:number;
 categories: Categories[];
 dataSource;
 displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', 'InsuranceName','HmoName'];
-
+ */
   constructor(private route:ActivatedRoute,private catServ:CategoryService,private router:Router) {
     //this.route.params.subscribe(data=>this.selectedCat=+data['id']); 
-   
-  
     // var id=+this.route.snapshot.paramMap.get('id');
    }
-
+   /* editDetails(price){
+     if(localStorage.getItem("currentUser")!=null||localStorage.getItem("currentUser")!=" "){
+      this.router.navigate(['editPrice',price.priceId]);
+     }
+   } */
   ngOnInit() {
+    
     // this.service.getClerck().subscribe((res)=>{
     //   this.users=res;
     //   this.dataSource = new MatTableDataSource<Users>(this.users);
- 
   }
-  getSubCategory(){
+ /*  getSubCategory(){
   this.catServ.getAllSubCategory(this.selectedCat).subscribe((res: Categories[]) => {
     if (res != null) {
       this.categories = res;    
@@ -36,5 +38,5 @@ displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', '
     else {
       console.error('שגיאה אירעה');
     }
-  });}
+  });} */
 }

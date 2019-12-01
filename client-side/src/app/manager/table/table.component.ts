@@ -36,7 +36,8 @@ export interface PeriodicElement {
  })
  export class tableComponent  implements OnInit {
 
-   displayedColumns: string[] = ['userName', 'adress', 'mail', 'telephone','isConfirm'];
+   displayedColumns: string[] = ['isConfirm', 'telephone', 'mail', 'adress','userName'];
+
   dataSource;
   selection; 
  

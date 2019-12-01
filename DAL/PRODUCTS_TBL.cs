@@ -15,12 +15,12 @@ namespace DAL
     public partial class PRODUCTS_TBL
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-		public PRODUCTS_TBL()
-		{
-			this.PRICEs = new HashSet<PRICE>();
-		}
-
-		public int productId { get; set; }
+        public PRODUCTS_TBL()
+        {
+            this.PRICEs = new HashSet<PRICE>();
+        }
+    
+        public int productId { get; set; }
         public string description { get; set; }
         public int categoryId { get; set; }
         public string imag { get; set; }
