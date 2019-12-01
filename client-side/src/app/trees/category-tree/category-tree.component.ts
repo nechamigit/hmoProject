@@ -11,14 +11,12 @@ export class CategoryTreeComponent implements OnInit {
 
   constructor(private categoryTreeService: CategoryTreeService) { }
   @Output() nodeClicked: EventEmitter<any> = new EventEmitter<any>();
-  @ViewChild('tree', { static: false }) tree: TreeComponent;
+  @ViewChild('tree', { static: true }) tree: TreeComponent;
 
   ngOnInit() {
     this.categoryTreeService.getCategoryTree().subscribe(
       (res: any) => {
         this.nodes = res;
-        this.tree.treeModel = res;
-        console.log(res);
       }
     )
   }

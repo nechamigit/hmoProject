@@ -12,8 +12,8 @@
  <div class="filterNode">
   <input [(ngModel)]="searchText" (keyup)="search($event)" placeholder="לחיפוש בקטגוריות "/>
   </div>
-  <div class="tree" #tree>
-    <tree-root [nodes]="nodes" [options]="options">
+  <div class="tree" > 
+    <tree-root #tree [nodes]="nodes" [options]="options">
         <ng-template #treeNodeTemplate let-node let-index="index">
             <a (click)="nodeClick(node.data)">{{ node.data.name }}</a>
         </ng-template>
