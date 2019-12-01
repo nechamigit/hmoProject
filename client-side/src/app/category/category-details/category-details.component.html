@@ -1,15 +1,15 @@
 <div class="categoryDetails" *ngIf="selectedCategory">
-  <h1>{{selectedCategory.Name}}</h1>
-  <div class="btn">
-  <button (click)="addCategory()" >הוסף קטגוריה</button>
-  <button (click)="addProduct()">להוספת מוצר</button> 
+  <h1 class="category_title">{{selectedCategory.Name}}</h1>
+  <div [hidden]="currentUser == 'user'" class="category_buttons">
+    <button class="button" (click)="addCategory()" >הוסף קטגוריה</button>
+    <button class="button" (click)="addProduct()">להוספת מוצר</button> 
   </div>
-  <div>
-  <app-product-card *ngFor="let product of selectedCategory.ProductsList" [(product)]="product"></app-product-card>
+  <div class="clearfix"></div>
+  <div class="row cards_list">
+  <app-product-card class="col-sm-4" *ngFor="let product of selectedCategory.ProductsList" [(product)]="product"></app-product-card>
  </div>
   <!-- <div *ngFor="let prod of selectedCategory.productList">
     {{prod.name}}  <button (click)="deleteProduct(prod)">למחיקת מוצר</button>
   </div> -->
- 
 </div>
 

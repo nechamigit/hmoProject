@@ -1,24 +1,6 @@
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.dll
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.pdb
-Y:\group 2 תשעט\קרקובר חנה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-D:\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.dll
-D:\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.pdb
-D:\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-D:\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.dll
-D:\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\bin\Debug\DTO.pdb
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.dll
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.pdb
-D:\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-Y:\group 2 תשעט\קופשיץ נחמה\HMOProgect\C#\HMO\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-C:\git\hmoProject\DTO\bin\Debug\DTO.dll
-C:\git\hmoProject\DTO\bin\Debug\DTO.pdb
-C:\git\hmoProject\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-C:\git\hmoProject\DTO\obj\Debug\DTO.dll
-C:\git\hmoProject\DTO\obj\Debug\DTO.pdb
-C:\git\hmoProject\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\user1\Source\Repos\hmoProject\DTO\bin\Debug\DTO.dll
+C:\Users\user1\Source\Repos\hmoProject\DTO\bin\Debug\DTO.pdb
+C:\Users\user1\Source\Repos\hmoProject\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\user1\Source\Repos\hmoProject\DTO\obj\Debug\DTO.dll
+C:\Users\user1\Source\Repos\hmoProject\DTO\obj\Debug\DTO.pdb
+C:\Users\user1\source\repos\hmoProject\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

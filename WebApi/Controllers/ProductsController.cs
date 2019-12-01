@@ -78,11 +78,11 @@ namespace WebApi.Controllers
 
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("getProductByKriterionAndAge")]
-        public List<ProductPrices> getProductByKriterionAndAge(int productId, int subItem)
+        public List<ProductPrices> getProductByKriterionAndAge(filter filter)
         {
-            return ProductsModule.getProductByKriterionAndAge(productId, subItem);
+            return ProductsModule.getProductByKriterionAndAge(filter.id, filter.age);
         }
         [HttpGet]
         [Route("GetProductInsurance")]
@@ -161,6 +161,11 @@ namespace WebApi.Controllers
             }
             return response;
         }
+    }
+    public class filter
+    {
+        public int id { get; set; }
+        public int age { get; set; }
     }
 }
 

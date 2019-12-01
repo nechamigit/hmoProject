@@ -19,7 +19,7 @@ categories;
     return this.http.get(environment.baseRoute+"Category/GetComperation/"+id);
   }
   getComplexComperation(id:number, age:number){
-    return this.http.get(environment.baseRoute+"products/getProductByKriterionAndAge/"+id+"?subItem="+age);
+    return this.http.post(environment.baseRoute+"Products/getProductByKriterionAndAge",{id:id,age:age});
   }
   save(product){
     return this.http.post(environment.baseRoute+"products/Create",product)

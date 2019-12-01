@@ -23,21 +23,30 @@ export class PriceComponent implements OnInit {
   constructor(private service:PriceService,private router:Router, private route:ActivatedRoute) 
   {
     route.params.subscribe(val => {
-      this.service.getPrice().subscribe((res)=>{
-        this.price=res;
-        this.dataSource = new MatTableDataSource<Price>(this.price);
-  
-      })
+
+        this.service.getPrice().subscribe((res)=>{
+          this.price=res;
+          this.dataSource = new MatTableDataSource<Price>(this.price);
+    
+        })
+      
+
      this.selection== new SelectionModel<Price>(true, []);
     });
   }
 
   ngOnInit() {
-    this.service.getPrice().subscribe((res)=>{
-      this.price=res;
-      this.dataSource = new MatTableDataSource<Price>(this.price);
+    this.route.params.subscribe(val => {
 
+        this.service.getPrice().subscribe((res)=>{
+          this.price=res;
+          this.dataSource = new MatTableDataSource<Price>(this.price);
+    
+        })
+      
     })
+
+
    this.selection== new SelectionModel<Price>(true, []);
   }
   isAllSelected() {

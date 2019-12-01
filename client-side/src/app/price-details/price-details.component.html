@@ -25,7 +25,7 @@
         <input type="text" matInput placeholder="גיל" name="rangeAge" required [(ngModel)]="price.ageRange">
       </mat-form-field>
     </div>
-    <b style="font-size: medium;">ביטוח:{{price.insuranceName}}</b>
+    <b style="font-size: medium">ביטוח {{price.insuranceName}}</b>
  
     <!-- <div class="row">
       <mat-form-field class="example">
@@ -34,8 +34,8 @@
     </div> -->
 
     <div class="example-button-row">
-      <button mat-fab color="primary" (click)= "update(price)">update</button>
-      <button mat-fab color="primary" (click)="deletePrice()">-</button>
+      <button   class="button" (click)= "update(price)">עדכון</button>
+      <button   class="button" (click)="deletePrice()">מחיקה</button>
       <!-- <button mat-fab color="primary" (click)="changeStatus()">+</button> -->
     </div>
   

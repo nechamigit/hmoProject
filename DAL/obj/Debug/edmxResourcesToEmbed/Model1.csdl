@@ -1,57 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="HMO_PROGECTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="HMO_PROGECTEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="AGE_TBL" EntityType="HMO_PROGECTModel.AGE_TBL" />
-    <EntitySet Name="CATEGORIES_TBL" EntityType="HMO_PROGECTModel.CATEGORIES_TBL" />
-    <EntitySet Name="HMO_TBL" EntityType="HMO_PROGECTModel.HMO_TBL" />
-    <EntitySet Name="INSURANCE_TBL" EntityType="HMO_PROGECTModel.INSURANCE_TBL" />
-    <EntitySet Name="PRICEs" EntityType="HMO_PROGECTModel.PRICE" />
-    <EntitySet Name="PRODUCTS_TBL" EntityType="HMO_PROGECTModel.PRODUCTS_TBL" />
-    <EntitySet Name="REQUEST_TBL" EntityType="HMO_PROGECTModel.REQUEST_TBL" />
-    <EntitySet Name="SATISFICATION_TBL" EntityType="HMO_PROGECTModel.SATISFICATION_TBL" />
-    <EntitySet Name="sysdiagrams" EntityType="HMO_PROGECTModel.sysdiagram" />
-    <EntitySet Name="USERS_TBL" EntityType="HMO_PROGECTModel.USERS_TBL" />
-    <AssociationSet Name="FK_PRICE_AGE_TBL" Association="HMO_PROGECTModel.FK_PRICE_AGE_TBL">
-      <End Role="AGE_TBL" EntitySet="AGE_TBL" />
-      <End Role="PRICE" EntitySet="PRICEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CATEGORIES_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL">
-      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
-      <End Role="CATEGORIES_TBL1" EntitySet="CATEGORIES_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PRODUCTS_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL">
-      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
-      <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_REQUEST_TBL_CATEGORIES_TBL" Association="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL">
-      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
-      <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_INSURANCE_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL">
-      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
-      <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SATISFICATION_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL">
-      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
-      <End Role="SATISFICATION_TBL" EntitySet="SATISFICATION_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_USERS_TBL_HMO_TBL" Association="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL">
-      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
-      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PRICE_INSURANCE_TBL" Association="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL">
-      <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
-      <End Role="PRICE" EntitySet="PRICEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PRICE_PRODUCTS_TBL" Association="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL">
-      <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
-      <End Role="PRICE" EntitySet="PRICEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_REQUEST_TBL_USERS_TBL" Association="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL">
-      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
-      <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="AGE_TBL">
     <Key>
       <PropertyRef Name="ageId" />
@@ -59,7 +7,7 @@
     <Property Name="ageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="begins" Type="Int32" />
     <Property Name="ends" Type="Int32" />
-    <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_AGE_TBL" FromRole="AGE_TBL" ToRole="PRICE" />
+    <NavigationProperty Name="PRICEs" Relationship="Self.FK_PRICE_AGE_TBL" FromRole="AGE_TBL" ToRole="PRICE" />
   </EntityType>
   <EntityType Name="CATEGORIES_TBL">
     <Key>
@@ -70,10 +18,10 @@
     <Property Name="parentCategory" Type="Int32" />
     <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="status" Type="Boolean" />
-    <NavigationProperty Name="CATEGORIES_TBL1" Relationship="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="CATEGORIES_TBL1" />
-    <NavigationProperty Name="CATEGORIES_TBL2" Relationship="HMO_PROGECTModel.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL1" ToRole="CATEGORIES_TBL" />
-    <NavigationProperty Name="PRODUCTS_TBL" Relationship="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="PRODUCTS_TBL" />
-    <NavigationProperty Name="REQUEST_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="REQUEST_TBL" />
+    <NavigationProperty Name="CATEGORIES_TBL1" Relationship="Self.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="CATEGORIES_TBL1" />
+    <NavigationProperty Name="CATEGORIES_TBL2" Relationship="Self.FK_CATEGORIES_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL1" ToRole="CATEGORIES_TBL" />
+    <NavigationProperty Name="PRODUCTS_TBL" Relationship="Self.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="PRODUCTS_TBL" />
+    <NavigationProperty Name="REQUEST_TBL" Relationship="Self.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="CATEGORIES_TBL" ToRole="REQUEST_TBL" />
   </EntityType>
   <EntityType Name="HMO_TBL">
     <Key>
@@ -82,9 +30,9 @@
     <Property Name="hmoId" Type="Int32" Nullable="false" />
     <Property Name="hmoName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="hmoMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="INSURANCE_TBL" Relationship="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="INSURANCE_TBL" />
-    <NavigationProperty Name="SATISFICATION_TBL" Relationship="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="SATISFICATION_TBL" />
-    <NavigationProperty Name="USERS_TBL" Relationship="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="USERS_TBL" />
+    <NavigationProperty Name="INSURANCE_TBL" Relationship="Self.FK_INSURANCE_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="INSURANCE_TBL" />
+    <NavigationProperty Name="SATISFICATION_TBL" Relationship="Self.FK_SATISFICATION_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="SATISFICATION_TBL" />
+    <NavigationProperty Name="USERS_TBL" Relationship="Self.FK_USERS_TBL_HMO_TBL" FromRole="HMO_TBL" ToRole="USERS_TBL" />
   </EntityType>
   <EntityType Name="INSURANCE_TBL">
     <Key>
@@ -95,8 +43,8 @@
     <Property Name="insuranceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="InsurancePrice" Type="Double" />
     <Property Name="description" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_INSURANCE_TBL_HMO_TBL" FromRole="INSURANCE_TBL" ToRole="HMO_TBL" />
-    <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL" FromRole="INSURANCE_TBL" ToRole="PRICE" />
+    <NavigationProperty Name="HMO_TBL" Relationship="Self.FK_INSURANCE_TBL_HMO_TBL" FromRole="INSURANCE_TBL" ToRole="HMO_TBL" />
+    <NavigationProperty Name="PRICEs" Relationship="Self.FK_PRICE_INSURANCE_TBL" FromRole="INSURANCE_TBL" ToRole="PRICE" />
   </EntityType>
   <EntityType Name="PRICE">
     <Key>
@@ -108,35 +56,35 @@
     <Property Name="insuranceId" Type="Int32" Nullable="false" />
     <Property Name="ageId" Type="Int32" />
     <Property Name="discount" Type="Double" />
-    <NavigationProperty Name="AGE_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_AGE_TBL" FromRole="PRICE" ToRole="AGE_TBL" />
-    <NavigationProperty Name="INSURANCE_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_INSURANCE_TBL" FromRole="PRICE" ToRole="INSURANCE_TBL" />
-    <NavigationProperty Name="PRODUCTS_TBL" Relationship="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL" FromRole="PRICE" ToRole="PRODUCTS_TBL" />
+    <NavigationProperty Name="AGE_TBL" Relationship="Self.FK_PRICE_AGE_TBL" FromRole="PRICE" ToRole="AGE_TBL" />
+    <NavigationProperty Name="INSURANCE_TBL" Relationship="Self.FK_PRICE_INSURANCE_TBL" FromRole="PRICE" ToRole="INSURANCE_TBL" />
+    <NavigationProperty Name="PRODUCTS_TBL" Relationship="Self.FK_PRICE_PRODUCTS_TBL" FromRole="PRICE" ToRole="PRODUCTS_TBL" />
   </EntityType>
   <EntityType Name="PRODUCTS_TBL">
     <Key>
       <PropertyRef Name="productId" />
     </Key>
     <Property Name="productId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="categoryId" Type="Int32" Nullable="false" />
     <Property Name="imag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CATEGORIES_TBL" Relationship="HMO_PROGECTModel.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="PRODUCTS_TBL" ToRole="CATEGORIES_TBL" />
-    <NavigationProperty Name="PRICEs" Relationship="HMO_PROGECTModel.FK_PRICE_PRODUCTS_TBL" FromRole="PRODUCTS_TBL" ToRole="PRICE" />
+    <NavigationProperty Name="CATEGORIES_TBL" Relationship="Self.FK_PRODUCTS_TBL_CATEGORIES_TBL" FromRole="PRODUCTS_TBL" ToRole="CATEGORIES_TBL" />
+    <NavigationProperty Name="PRICEs" Relationship="Self.FK_PRICE_PRODUCTS_TBL" FromRole="PRODUCTS_TBL" ToRole="PRICE" />
   </EntityType>
   <EntityType Name="REQUEST_TBL">
     <Key>
       <PropertyRef Name="requestId" />
     </Key>
-    <Property Name="categoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="categoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="parentCategory" Type="Boolean" Nullable="false" />
     <Property Name="requestStatus" Type="Int32" />
     <Property Name="requestKind" Type="Int32" Nullable="false" />
     <Property Name="categoryId" Type="Int32" Nullable="false" />
     <Property Name="requestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="userId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CATEGORIES_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="REQUEST_TBL" ToRole="CATEGORIES_TBL" />
-    <NavigationProperty Name="USERS_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL" FromRole="REQUEST_TBL" ToRole="USERS_TBL" />
+    <NavigationProperty Name="CATEGORIES_TBL" Relationship="Self.FK_REQUEST_TBL_CATEGORIES_TBL" FromRole="REQUEST_TBL" ToRole="CATEGORIES_TBL" />
+    <NavigationProperty Name="USERS_TBL" Relationship="Self.FK_REQUEST_TBL_USERS_TBL" FromRole="REQUEST_TBL" ToRole="USERS_TBL" />
   </EntityType>
   <EntityType Name="SATISFICATION_TBL">
     <Key>
@@ -149,17 +97,7 @@
     <Property Name="userId" Type="Int32" />
     <Property Name="comment" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="date" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_SATISFICATION_TBL_HMO_TBL" FromRole="SATISFICATION_TBL" ToRole="HMO_TBL" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="HMO_TBL" Relationship="Self.FK_SATISFICATION_TBL_HMO_TBL" FromRole="SATISFICATION_TBL" ToRole="HMO_TBL" />
   </EntityType>
   <EntityType Name="USERS_TBL">
     <Key>
@@ -167,24 +105,24 @@
     </Key>
     <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="userName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="tz" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="tz" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="password" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
     <Property Name="hmoId" Type="Int32" />
     <Property Name="isAdmin" Type="Boolean" Nullable="false" />
     <Property Name="adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="mail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="telephone" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
     <Property Name="requestForm" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="isConfirm" Type="Boolean" />
     <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="lastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="isActive" Type="Boolean" />
-    <NavigationProperty Name="HMO_TBL" Relationship="HMO_PROGECTModel.FK_USERS_TBL_HMO_TBL" FromRole="USERS_TBL" ToRole="HMO_TBL" />
-    <NavigationProperty Name="REQUEST_TBL" Relationship="HMO_PROGECTModel.FK_REQUEST_TBL_USERS_TBL" FromRole="USERS_TBL" ToRole="REQUEST_TBL" />
+    <NavigationProperty Name="HMO_TBL" Relationship="Self.FK_USERS_TBL_HMO_TBL" FromRole="USERS_TBL" ToRole="HMO_TBL" />
+    <NavigationProperty Name="REQUEST_TBL" Relationship="Self.FK_REQUEST_TBL_USERS_TBL" FromRole="USERS_TBL" ToRole="REQUEST_TBL" />
   </EntityType>
   <Association Name="FK_PRICE_AGE_TBL">
-    <End Type="HMO_PROGECTModel.AGE_TBL" Role="AGE_TBL" Multiplicity="0..1" />
-    <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+    <End Role="AGE_TBL" Type="Self.AGE_TBL" Multiplicity="0..1" />
+    <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AGE_TBL">
         <PropertyRef Name="ageId" />
@@ -195,8 +133,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CATEGORIES_TBL_CATEGORIES_TBL">
-    <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL1" Multiplicity="0..1" />
+    <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+    <End Role="CATEGORIES_TBL1" Type="Self.CATEGORIES_TBL" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="CATEGORIES_TBL">
         <PropertyRef Name="categoriesId" />
@@ -207,8 +145,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PRODUCTS_TBL_CATEGORIES_TBL">
-    <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.PRODUCTS_TBL" Role="PRODUCTS_TBL" Multiplicity="*" />
+    <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+    <End Role="PRODUCTS_TBL" Type="Self.PRODUCTS_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CATEGORIES_TBL">
         <PropertyRef Name="categoriesId" />
@@ -219,8 +157,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_REQUEST_TBL_CATEGORIES_TBL">
-    <End Type="HMO_PROGECTModel.CATEGORIES_TBL" Role="CATEGORIES_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.REQUEST_TBL" Role="REQUEST_TBL" Multiplicity="*" />
+    <End Role="CATEGORIES_TBL" Type="Self.CATEGORIES_TBL" Multiplicity="1" />
+    <End Role="REQUEST_TBL" Type="Self.REQUEST_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CATEGORIES_TBL">
         <PropertyRef Name="categoriesId" />
@@ -231,8 +169,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_INSURANCE_TBL_HMO_TBL">
-    <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.INSURANCE_TBL" Role="INSURANCE_TBL" Multiplicity="*" />
+    <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="1" />
+    <End Role="INSURANCE_TBL" Type="Self.INSURANCE_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HMO_TBL">
         <PropertyRef Name="hmoId" />
@@ -243,8 +181,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SATISFICATION_TBL_HMO_TBL">
-    <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.SATISFICATION_TBL" Role="SATISFICATION_TBL" Multiplicity="*" />
+    <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="1" />
+    <End Role="SATISFICATION_TBL" Type="Self.SATISFICATION_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HMO_TBL">
         <PropertyRef Name="hmoId" />
@@ -255,8 +193,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_USERS_TBL_HMO_TBL">
-    <End Type="HMO_PROGECTModel.HMO_TBL" Role="HMO_TBL" Multiplicity="0..1" />
-    <End Type="HMO_PROGECTModel.USERS_TBL" Role="USERS_TBL" Multiplicity="*" />
+    <End Role="HMO_TBL" Type="Self.HMO_TBL" Multiplicity="0..1" />
+    <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HMO_TBL">
         <PropertyRef Name="hmoId" />
@@ -267,8 +205,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PRICE_INSURANCE_TBL">
-    <End Type="HMO_PROGECTModel.INSURANCE_TBL" Role="INSURANCE_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+    <End Role="INSURANCE_TBL" Type="Self.INSURANCE_TBL" Multiplicity="1" />
+    <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="INSURANCE_TBL">
         <PropertyRef Name="insuranceId" />
@@ -279,8 +217,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PRICE_PRODUCTS_TBL">
-    <End Type="HMO_PROGECTModel.PRODUCTS_TBL" Role="PRODUCTS_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.PRICE" Role="PRICE" Multiplicity="*" />
+    <End Role="PRODUCTS_TBL" Type="Self.PRODUCTS_TBL" Multiplicity="1" />
+    <End Role="PRICE" Type="Self.PRICE" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PRODUCTS_TBL">
         <PropertyRef Name="productId" />
@@ -291,8 +229,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_REQUEST_TBL_USERS_TBL">
-    <End Type="HMO_PROGECTModel.USERS_TBL" Role="USERS_TBL" Multiplicity="1" />
-    <End Type="HMO_PROGECTModel.REQUEST_TBL" Role="REQUEST_TBL" Multiplicity="*" />
+    <End Role="USERS_TBL" Type="Self.USERS_TBL" Multiplicity="1" />
+    <End Role="REQUEST_TBL" Type="Self.REQUEST_TBL" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USERS_TBL">
         <PropertyRef Name="userId" />
@@ -302,4 +240,55 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="HMO_PROGECTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AGE_TBL" EntityType="Self.AGE_TBL" />
+    <EntitySet Name="CATEGORIES_TBL" EntityType="Self.CATEGORIES_TBL" />
+    <EntitySet Name="HMO_TBL" EntityType="Self.HMO_TBL" />
+    <EntitySet Name="INSURANCE_TBL" EntityType="Self.INSURANCE_TBL" />
+    <EntitySet Name="PRICEs" EntityType="Self.PRICE" />
+    <EntitySet Name="PRODUCTS_TBL" EntityType="Self.PRODUCTS_TBL" />
+    <EntitySet Name="REQUEST_TBL" EntityType="Self.REQUEST_TBL" />
+    <EntitySet Name="SATISFICATION_TBL" EntityType="Self.SATISFICATION_TBL" />
+    <EntitySet Name="USERS_TBL" EntityType="Self.USERS_TBL" />
+    <AssociationSet Name="FK_PRICE_AGE_TBL" Association="Self.FK_PRICE_AGE_TBL">
+      <End Role="AGE_TBL" EntitySet="AGE_TBL" />
+      <End Role="PRICE" EntitySet="PRICEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATEGORIES_TBL_CATEGORIES_TBL" Association="Self.FK_CATEGORIES_TBL_CATEGORIES_TBL">
+      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+      <End Role="CATEGORIES_TBL1" EntitySet="CATEGORIES_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTS_TBL_CATEGORIES_TBL" Association="Self.FK_PRODUCTS_TBL_CATEGORIES_TBL">
+      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+      <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REQUEST_TBL_CATEGORIES_TBL" Association="Self.FK_REQUEST_TBL_CATEGORIES_TBL">
+      <End Role="CATEGORIES_TBL" EntitySet="CATEGORIES_TBL" />
+      <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INSURANCE_TBL_HMO_TBL" Association="Self.FK_INSURANCE_TBL_HMO_TBL">
+      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+      <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SATISFICATION_TBL_HMO_TBL" Association="Self.FK_SATISFICATION_TBL_HMO_TBL">
+      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+      <End Role="SATISFICATION_TBL" EntitySet="SATISFICATION_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USERS_TBL_HMO_TBL" Association="Self.FK_USERS_TBL_HMO_TBL">
+      <End Role="HMO_TBL" EntitySet="HMO_TBL" />
+      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRICE_INSURANCE_TBL" Association="Self.FK_PRICE_INSURANCE_TBL">
+      <End Role="INSURANCE_TBL" EntitySet="INSURANCE_TBL" />
+      <End Role="PRICE" EntitySet="PRICEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRICE_PRODUCTS_TBL" Association="Self.FK_PRICE_PRODUCTS_TBL">
+      <End Role="PRODUCTS_TBL" EntitySet="PRODUCTS_TBL" />
+      <End Role="PRICE" EntitySet="PRICEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REQUEST_TBL_USERS_TBL" Association="Self.FK_REQUEST_TBL_USERS_TBL">
+      <End Role="USERS_TBL" EntitySet="USERS_TBL" />
+      <End Role="REQUEST_TBL" EntitySet="REQUEST_TBL" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

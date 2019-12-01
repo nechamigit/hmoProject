@@ -55,10 +55,12 @@ namespace BLL.Module
                                                           join ins in ctx.INSURANCE_TBL on prc.insuranceId equals ins.insuranceId
                                                           join hmo in ctx.HMO_TBL on ins.hmoId equals hmo.hmoId
                                                           where prc.productId == productId
-                                                          && (prc.AGE_TBL.begins >= age && prc.AGE_TBL.ends <= age)
+                                                          
                                                           select new ProductPrices
                                                           {
                                                               AgeId = prc.ageId,
+                                                              AgeBegin = prc.AGE_TBL.begins,
+                                                              AgeEnd = prc.AGE_TBL.ends,
                                                               Discount = prc.discount,
                                                               HmoId = hmo.hmoId,
                                                               HmoName = hmo.hmoName,
@@ -70,6 +72,7 @@ namespace BLL.Module
                                                               ProductId = productId,
                                                               ProductName = product.name
                                                           }).ToList();
+                var l = listOfProductPrice.Where(x => x.AgeBegin <= age && x.AgeEnd >= age).ToList();
                 var listAge = ctx.AGE_TBL.ToList();
                 foreach (var ageItem in listAge)
                 {
@@ -80,7 +83,7 @@ namespace BLL.Module
                         relevantAge.AgeEnd = ageItem.ends;
                     }
                 }
-                return listOfProductPrice;
+                return l;
             }
         }
 

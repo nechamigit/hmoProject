@@ -22,6 +22,7 @@ export class ViewProductComponent implements OnInit {
   showTable: boolean = false;
   selectedCat:number;
   price:Price;
+   currentUser:string;
 categories: Categories[];
 dataSource;
 displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', 'InsuranceName','HmoName'];
@@ -37,10 +38,12 @@ displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', '
     return this.sanitizer.bypassSecurityTrustUrl(url);
    }
   ngOnInit(){
+    this.currentUser = localStorage.getItem("currentUser");
     // this.route.params.subscribe((data) => {
     //   this.price.priceId = +data.product;
     var id = +this.route.snapshot.paramMap.get('id');
-    if (id) {
+    if (id != 0) {
+
       this.productService.getProductById(id).subscribe((res: Products) => {
         this.product = res;
         this.productService.getComperation(this.product.productId).subscribe(
@@ -50,7 +53,18 @@ displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', '
           })
       })
     }
-    else { }
+    else { 
+          var selectedProductId = +(localStorage.getItem("selectedProduct"));
+          
+      this.productService.getProductById(selectedProductId).subscribe((res: Products) => {
+        this.product = res;
+        var r = JSON.parse(localStorage.getItem("comlexList"));
+        this.dataSource = r;
+        this.showTable=true;
+      })
+  
+      }
+    
 
     if (localStorage.getItem("userId"))
       this.canEdit = true;

@@ -29,6 +29,7 @@ export class UserService {
     changeStatus(clerk){
       return this.http.post(environment.baseRoute+"clerk/UpdateConfirm",clerk);
     }
+    
      
 }
  

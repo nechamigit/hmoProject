@@ -15,6 +15,8 @@ import { Hmo } from 'src/app/model/Hmo';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/product/product.service';
+import { CategoryDetails } from 'src/app/model/category-details';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-categories-list',
   templateUrl: './categories-list.component.html',
@@ -28,6 +30,7 @@ export class CategoriesListComponent implements OnInit {
   // Field:boolean=true;
   // options;
   // filteredOptions;
+  ageSelected:number = 0;
   options: any;
   filteredOptions: Observable<string[]>;
   selectedCategory;
@@ -75,11 +78,14 @@ export class CategoriesListComponent implements OnInit {
 
   //   return this.option.filter(option => option.categoryName.includes(filterValue));
   // }
-  // onSelectedOption(event: MatAutocompleteSelectedEvent) {
-  //   var selectedCategory = event.option.value;
-  //   // this.router.navigate(['view',selectedCategory.categoryId]);
-  // }
-
+  onSelectedOption(event: MatAutocompleteSelectedEvent) {
+    this.catServ.getCategoryById(event.option.value.categoryId).subscribe((res:CategoryDetails)=>{
+      this.selectedCategory=res;
+    })
+  }
+cardSelected(event){
+  this.product.productId = event;
+}
   logNode(node) {
     this.child.selectedCategoryWasChanged(node.id);
   }
@@ -91,13 +97,7 @@ export class CategoriesListComponent implements OnInit {
 
     return this.options.filter(option => option.categoryName.includes(filterValue));
   }
-complexSearch(){
-  this.productService.getComplexComperation(this.product.productId, 10).subscribe(
-    (res)=>{
-      
-    }
-  )
-}
+
   displayFn(category?: any): string | undefined {
     return category ? category.categoryName : undefined;
   }
@@ -109,7 +109,21 @@ complexSearch(){
   //     })
   // }
   compareS(){
-    this.route.navigate(['price']);
+    if(this.product==null){
+      Swal.fire('בחר במוצר מתוך קגוריה נבחרת');
+      Swal.fire('שם משתמש וסיסמא ללקוח ומנהל בלבד');
+    }
+    this.productService.getComplexComperation(this.product.productId, this.ageSelected).subscribe(
+      (res)=>{
+        localStorage.setItem("comlexList",JSON.stringify(res));
+        localStorage.setItem("selectedProduct",this.product.productId.toString());
+
+        setTimeout(() => {
+          this.route.navigate(['product']);
+        }, 1000);
+       
+      }
+    )
   }
 
 }

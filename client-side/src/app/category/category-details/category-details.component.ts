@@ -16,7 +16,10 @@ export class CategoryDetailsComponent implements OnInit {
   selectedCategory:CategoryDetails;
   selectedProduct:productDetails;
   product:Products;
-ngOnInit(){}
+  currentUser:string;
+ngOnInit(){
+  this.currentUser = localStorage.getItem("currentUser");
+}
   constructor(private categoryService:CategoryService,private router:Router,private route:ActivatedRoute) { }
 
   selectedCategoryWasChanged(selectedCategoryId:number){

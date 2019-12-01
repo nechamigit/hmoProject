@@ -13,24 +13,24 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<nav class="navbar navbar-dark bg-primary">
 <div class="menu">
-    <div class="container-fluid">
+    <div class="container-fluid" id="header_items">
 		<!-- <div class="navbar-header"> -->
         <div class="imgLogo">
             <img src="assets/imges/logo with a small change.png " height="120px" width="170px">    
           </div>
-		<!-- </div> -->
-		<div>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a routerLink="/login" routerLinkActive="active" ><span class="glyphicon glyphicon-user"></span>התחברות</a></li>
-        <li><a routerLink="/categories" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>חיפוש מוצר</a></li>
+          <ul id="navber_wrap">
+        <li><a routerLink="/login" routerLinkActive="active" >
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          התחברות
+        </a></li>
+        <li><a routerLink="/categories" routerLinkActive="active">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          חיפוש מוצר</a></li>
         <li><a routerLink="/about" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>אודות</a></li>
         <li><a routerLink="/hierarchy" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>דרוגים בשטח</a></li>
         <li><a routerLink="/main" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>ראשי</a></li>
         <!-- <a routerLink="/categories" routerLinkActive="active"></a> -->
 			</ul>
-		</div>
 	</div>
 </div>
-</nav>

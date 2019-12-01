@@ -14,6 +14,7 @@ import { stringify } from '@angular/compiler/src/util';
 import {MatButtonModule} from '@angular/material/button';
 import { MatDialogRef } from '@angular/material';
 import Swal from 'sweetalert2';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-clerk-details',
@@ -27,11 +28,15 @@ export class ClerkDetailsComponent   {
  hmos: Array<Hmo>;
  isAdmin:true;
   userType: string = "";
+  fileToUpload: File = null;
+  httpClient: any;
+  currentUser:string;
   //route:any;
   
   constructor(private userService: UserService,private router:Router,private route:ActivatedRoute,
     public dialogRef: MatDialogRef<ClerkDetails>) { }
    ngOnInit() { 
+    this.currentUser = localStorage.getItem("currentUser");
     var id=+this.route.snapshot.paramMap.get('id');
     if(id)
     {
@@ -127,6 +132,21 @@ update(){
       this.router.navigate(["table"]);
     }
   )
+}
+handleFileInput(files: FileList) {
+  this.fileToUpload = files.item(0);
+}
+postFile(fileToUpload: File): Observable<boolean> {
+  const endpoint = 'your-destination-url';
+  const formData: FormData = new FormData();
+  formData.append('fileKey', fileToUpload, fileToUpload.name);
+  return this.httpClient
+    .post(endpoint, formData, { headers: 'https://us-central1-tutorial-e6ea7.cloudfunctions.net/fileUpload' })
+    .map(() => { return true; })
+    .catch((e) => this.handleError(e));
+}
+handleError(e){
+  console.log('error'+e)
 }
 // save() {
 //   this.userService.save(this.clerk.value)
