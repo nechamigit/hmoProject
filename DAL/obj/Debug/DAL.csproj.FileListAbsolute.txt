@@ -10,3 +10,15 @@ C:\Users\user1\Source\Repos\hmoProject\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\user1\Source\Repos\hmoProject\DAL\obj\Debug\DAL.dll
 C:\Users\user1\Source\Repos\hmoProject\DAL\obj\Debug\DAL.pdb
 C:\Users\user1\source\repos\hmoProject\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\DAL.dll.config
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\DAL.dll
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\DAL.pdb
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\git\hmo\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\git\hmo\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\hmo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\hmo\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\user\Desktop\git\hmo\DAL\obj\Debug\DAL.dll
+C:\Users\user\Desktop\git\hmo\DAL\obj\Debug\DAL.pdb

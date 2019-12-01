@@ -26,7 +26,7 @@ export class CategoriesListComponent implements OnInit {
   myControl = new FormControl();
   constructor(private catServ: CategoryService,private route:Router, private productService:ProductService ) { }
   @ViewChild('categoryDetails', { static: false }) child: CategoryDetailsComponent;
-  searchVal: string = "tree";
+  searchVal: string = 'tree';
   // Field:boolean=true;
   // options;
   // filteredOptions;
