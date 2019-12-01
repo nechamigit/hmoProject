@@ -222,3 +222,12 @@ C:\Users\user\Desktop\git\hmo\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.c
 C:\Users\user\Desktop\git\hmo\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 C:\Users\user\Desktop\git\hmo\WebApi\obj\Debug\WebApi.dll
 C:\Users\user\Desktop\git\hmo\WebApi\obj\Debug\WebApi.pdb
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.dll
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Security.dll
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Owin.dll
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.xml
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Security.xml
+C:\Users\user1\source\repos\hmoProject\WebApi\bin\Microsoft.Owin.Security.OAuth.xml
