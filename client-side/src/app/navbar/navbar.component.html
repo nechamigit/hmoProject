@@ -34,7 +34,7 @@
         <li><a routerLink="/about" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>אודות</a></li>
         <li><a routerLink="/hierarchy" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>דרוגים בשטח</a></li>
         <li><a routerLink="/main" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>ראשי</a></li>
-        <li *ngIf="currentUser!=null&&currentUser!=''"><a routerLink="/manager" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>מנהל</a></li>
+        <li *ngIf="currentUser=='admin'"><a routerLink="/manager" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>מנהל</a></li>
         <!-- <a routerLink="/categories" routerLinkActive="active"></a> -->
 			</ul>
 	</div>
