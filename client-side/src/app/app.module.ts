@@ -67,7 +67,7 @@ import { EditCompareComponent } from './edit-compare/edit-compare.component';
     HierarchyComponent,
     PriceComponent,
     PriceDetailsComponent,
-    EditCompareComponent,
+    EditCompareComponent
     // ReactiveFormsModule
     
   ],

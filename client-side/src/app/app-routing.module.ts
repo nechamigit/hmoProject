@@ -47,13 +47,13 @@ const routes: Routes = [
   { path: 'categoryTable', component: RequestTableComponent },
   { path: 'categoryDetails', component: CategoryDetails },
   { path: 'tree', component: CategoryTreeComponent },
- { path: '123', component: ViewProductComponent },
- { path: 'editPrice/:id', component: PriceDetailsComponent },
- { path: 'price', component: PriceComponent },
- { path: 'price', component: PriceComponent },
- {path:'add',component:AddCategoryComponent},
- {path:'editCompare',component:EditCompareComponent},
-  { path: '**', component: MainComponent },
+  { path: '123', component: ViewProductComponent },
+  { path: 'editPrice/:id', component: PriceDetailsComponent },
+  { path: 'price', component: PriceComponent },
+  { path: 'price', component: PriceComponent },
+  { path: 'add', component: AddCategoryComponent },
+  { path: 'editCompare', component: EditCompareComponent },
+  { path: '**', component: MainComponent }
 
 ];
 

@@ -76,7 +76,7 @@ displayedColumns: string[] = ['Discount','InsurancePrice','PriceText',  'Age', '
       })
   }
   addCompare(){
-    this.router.navigate(['editCompare'])
+    this.router.navigate(['editCompare']);
   }
   getSubCategory(){
     this.catServ.getAllSubCategory(this.selectedCat).subscribe((res: Categories[]) => {
