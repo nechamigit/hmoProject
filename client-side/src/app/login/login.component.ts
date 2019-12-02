@@ -7,6 +7,7 @@ import { Users } from '../model/Users';
 // import { Swal } from 'sweetalert'
 import Swal from 'sweetalert2'
 import { DialogService } from '../dialog.service';
+import { GlobalVariables } from '../global/global-variable';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,7 @@ import { DialogService } from '../dialog.service';
 export class LoginComponent implements OnInit {
 
   user: UserLoginData = new UserLoginData();
-  constructor(private loginS: LoginService, private router: Router,private dialogService:DialogService) { }
+  constructor(private loginS: LoginService, private router: Router,private dialogService:DialogService,private globalVariable:GlobalVariables) { }
 
   ngOnInit() {
     //this.login();
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("userName", this.user.userName);
         if (res == null)
        {
-         localStorage.setItem("currentUser","user")
+        //  localStorage.setItem("currentUser","user")
 
          
           console.error('שם משתמש וסיסמא ללקוח ומנהל בלבד');
@@ -43,11 +44,13 @@ export class LoginComponent implements OnInit {
         else if(res=='clerk')
         {
           localStorage.setItem("currentUser", res);
+          this.globalVariable.userChange.next(res);
           console.log(res);
           this.router.navigate(['categories']);
         }
         else{
           localStorage.setItem("currentUser", res);
+          this.globalVariable.userChange.next(res);
           console.log(res);
           this.router.navigate(['manager']);
         }

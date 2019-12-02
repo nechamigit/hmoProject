@@ -20,9 +20,13 @@
             <img src="assets/imges/logo with a small change.png " height="120px" width="170px">    
           </div>
           <ul id="navber_wrap">
-        <li><a routerLink="/login" routerLinkActive="active" >
+        <li *ngIf="currentUser==null||currentUser==''"><a routerLink="/login" routerLinkActive="active" >
           <i class="fa fa-user-circle" aria-hidden="true"></i>
           התחברות
+        </a></li>
+        <li *ngIf="currentUser!=null&&currentUser!=''"><a routerLink="/login" routerLinkActive="active" (click)="logout()" >
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          התנתק
         </a></li>
         <li><a routerLink="/categories" routerLinkActive="active">
           <i class="fa fa-search" aria-hidden="true"></i>
@@ -30,6 +34,7 @@
         <li><a routerLink="/about" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>אודות</a></li>
         <li><a routerLink="/hierarchy" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>דרוגים בשטח</a></li>
         <li><a routerLink="/main" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>ראשי</a></li>
+        <li *ngIf="currentUser!=null&&currentUser!=''"><a routerLink="/manager" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>מנהל</a></li>
         <!-- <a routerLink="/categories" routerLinkActive="active"></a> -->
 			</ul>
 	</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalVariables } from '../global/global-variable';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  currentUser:string=null;
+  constructor(private globalVariable:GlobalVariables) {
+    this.globalVariable.getUserChangeEmitter().subscribe((res) => {
+      this.currentUser = res;
+    })
+   }
 
   ngOnInit() {
   }
 
+  logOut(){
+    localStorage.removeItem("");
+    localStorage.removeItem("");
+  }
 }
